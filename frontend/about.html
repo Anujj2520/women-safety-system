@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakhi | About System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">WS</div><div><h1>Sakhi</h1><span>Women Safety System</span></div></div>
+      <nav class="nav">
+           <!-- HOME -->
+                <a href="index.html"
+                   class="nav-link"
+                   data-page="home">
+
+                    <span>⌂</span>
+                    <label>Home</label>
+
+                </a>
+        <a href="dashboard.html" class="nav-link" data-page="dashboard"><span>📊</span><label>Dashboard</label></a>
+        <a href="alerts.html" class="nav-link" data-page="alerts"><span>🚨</span><label>Alerts</label><b id="navAlertCount">0</b></a>
+        <a href="devices.html" class="nav-link" data-page="devices"><span>◈</span><label>Devices</label></a>
+        <a href="location.html" class="nav-link" data-page="location"><span>⌖</span><label>Live Location</label></a>
+        <a href="about.html" class="nav-link" data-page="about"><span>i</span><label>About System</label></a>
+      </nav>
+      <div class="sidebar-footer"><div class="mini-status"><span class="status-dot"></span> Backend API</div><small>localhost:5000</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">SAFETY COMMAND CENTER</p><h2>About System</h2></div><div class="topbar-meta"><span id="clock">--:--:--</span><span class="connection-badge" id="connectionBadge"><i></i> Checking...</span></div></header>
+      <section class="hero compact"><div><p class="eyebrow">PROJECT OVERVIEW</p><h3>Low-Cost Wearable Safety System</h3><p>A college project prototype connecting a wearable device, Node.js backend, JSON storage and a monitoring dashboard.</p></div></section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-header"><div><p class="eyebrow">ARCHITECTURE</p><h3>How the system works</h3></div></div>
+          <div class="flow">
+            <div class="flow-node"><strong>Wearable</strong><span>SOS • GPS • Battery</span></div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-node"><strong>Node.js Backend</strong><span>REST APIs</span></div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-node"><strong>JSON Storage</strong><span>Alerts • Devices</span></div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-node"><strong>Dashboard</strong><span>Monitor • Respond</span></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header"><div><p class="eyebrow">CURRENT BUILD</p><h3>Implemented features</h3></div></div>
+          <div class="check-list">
+            <div>✓ SOS alert API</div>
+            <div>✓ Device heartbeat API</div>
+            <div>✓ GPS coordinates</div>
+            <div>✓ Battery reporting</div>
+            <div>✓ Persistent JSON storage</div>
+            <div>✓ Alert status management</div>
+            <div>✓ Mock wearable simulator</div>
+            <div>✓ Multi-page monitoring frontend</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header"><div><p class="eyebrow">ROADMAP</p><h3>Planned upgrades</h3></div></div>
+        <div class="upgrade-grid">
+          <div><strong>PostgreSQL</strong><span>Replace JSON storage when the project needs scalable data.</span></div>
+          <div><strong>Real Hardware</strong><span>Connect physical SOS button, GPS and GSM modules.</span></div>
+          <div><strong>Notifications</strong><span>Add emergency-contact notification workflows.</span></div>
+          <div><strong>Authentication</strong><span>Add secure admin and user access.</span></div>
+        </div>
+      </section>
+      <footer class="footer">Sakhi Women Safety System • 2026</footer>
+    </main>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6413 @@
+/* =========================================================
+   WOMEN SAFETY SYSTEM - PUBLIC COMPANY WEBSITE
+   Clean merged public-site styles
+   ========================================================= */
+
+body.company-home {
+    margin: 0;
+    background: #fcfaff;
+    color: #25213a;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+body.company-home a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   PUBLIC NAVBAR
+   ========================================================= */
+
+.company-navbar {
+    min-height: 78px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #eee9f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.company-logo-link {
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.company-logo-mark {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #7048c8;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 7px 20px rgba(112, 72, 200, 0.22);
+}
+
+.company-logo h1 {
+    margin: 0;
+    color: #29233d;
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.company-logo span {
+    display: block;
+    margin-top: 3px;
+    color: #948ba8;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 1.4px;
+}
+
+.company-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 24px;
+}
+
+/* Compatibility: technology/company pages may use direct links inside .company-nav. */
+.company-nav > a {
+    color: #665f75;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.company-nav > a:hover,
+.company-nav > a.active {
+    color: #7048c8;
+}
+
+.company-nav > a.login-button {
+    padding: 11px 17px;
+    color: #fff;
+    background: #7048c8;
+    border-radius: 10px;
+    box-shadow: 0 7px 18px rgba(112, 72, 200, 0.18);
+}
+
+.company-nav > a.login-button:hover {
+    color: #fff;
+    background: #6239b7;
+    transform: translateY(-1px);
+}
+
+/* IMPORTANT: desktop links are inside .desktop-nav in home.html */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.desktop-nav a {
+    color: #665f75;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: #7048c8;
+}
+
+.desktop-nav .login-button {
+    padding: 11px 17px;
+    color: #fff;
+    background: #7048c8;
+    border-radius: 10px;
+    box-shadow: 0 7px 18px rgba(112, 72, 200, 0.18);
+}
+
+.desktop-nav .login-button:hover {
+    color: #fff;
+    background: #6239b7;
+    transform: translateY(-1px);
+}
+
+/* Mobile menu button is hidden on desktop */
+.mobile-menu-button {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #e5dcef;
+    border-radius: 11px;
+    background: #f8f4fd;
+    color: #7048c8;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.company-hero {
+    min-height: 650px;
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 35%, rgba(198, 177, 255, 0.32), transparent 32%),
+        linear-gradient(135deg, #fff 0%, #faf6ff 100%);
+}
+
+.company-hero::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -170px;
+    bottom: -200px;
+    border-radius: 50%;
+    background: #f0e8ff;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tag,
+.company-home .section-label {
+    color: #8a61d4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.hero-content h2 {
+    max-width: 680px;
+    margin: 18px 0;
+    color: #29233d;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+}
+
+.hero-content h2 span,
+.company-intro h2 span,
+.company-about h2 span {
+    color: #7048c8;
+}
+
+.hero-content p {
+    max-width: 600px;
+    color: #71697e;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.company-home .primary-button,
+.company-home .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 21px;
+    border-radius: 11px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.company-home .primary-button {
+    background: #7048c8;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(112, 72, 200, 0.22);
+}
+
+.company-home .primary-button:hover {
+    background: #6239b7;
+    transform: translateY(-2px);
+}
+
+.company-home .secondary-button {
+    background: #fff;
+    color: #7048c8;
+    border: 1px solid #ddd3ef;
+}
+
+.company-home .secondary-button:hover {
+    background: #f7f2ff;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO DEVICE
+   ========================================================= */
+
+.hero-visual {
+    min-height: 500px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.device-glow {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(164, 123, 239, 0.30), rgba(230, 215, 255, 0.10), transparent 70%);
+}
+
+.company-home .wearable {
+    width: 190px;
+    height: 300px;
+    border-radius: 43px;
+    background: linear-gradient(145deg, #fff, #f4effb);
+    border: 1px solid #e5dff0;
+    box-shadow: 0 30px 70px rgba(83, 58, 120, 0.16), inset 0 0 25px rgba(112, 72, 200, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 31px;
+    position: relative;
+    z-index: 2;
+}
+
+.company-home .wearable-top {
+    color: #8a61d4;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.company-home .sos-button {
+    width: 100px;
+    height: 100px;
+    margin-top: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #7048c8;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    box-shadow: 0 0 0 11px #f0e9fb, 0 14px 35px rgba(112, 72, 200, 0.25);
+}
+
+.company-home .wearable-status {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #8d849a;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.company-home .wearable-status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #5fc28b;
+}
+
+.floating-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 16px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e9e1f2;
+    border-radius: 13px;
+    box-shadow: 0 18px 40px rgba(77, 54, 108, 0.12);
+    z-index: 3;
+}
+
+.alert-card-demo { top: 100px; right: 0; }
+.location-card-demo { bottom: 85px; left: 0; }
+
+.demo-icon {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #f1eaff;
+    color: #7048c8;
+    font-weight: 800;
+}
+
+.floating-card strong {
+    display: block;
+    color: #342d44;
+    font-size: 11px;
+}
+
+.floating-card small {
+    display: block;
+    margin-top: 4px;
+    color: #958ca2;
+    font-size: 9px;
+}
+
+/* =========================================================
+   HOME SECTIONS
+   ========================================================= */
+
+.company-intro {
+    padding: 100px 8%;
+    text-align: center;
+    background: #fff;
+}
+
+.company-intro .section-label {
+    margin-bottom: 14px;
+}
+
+.company-intro h2 {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #29233d;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.company-intro > p:last-of-type {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #777083;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.company-section {
+    padding: 100px 8%;
+    background: #fcfaff;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 12px 0 15px;
+    color: #29233d;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+}
+
+.section-heading > p:last-child {
+    color: #81788d;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   HOW IT WORKS / STEP CARDS
+   ========================================================= */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #ebe4f2;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(75, 50, 105, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(75, 50, 105, 0.11);
+}
+
+.step-number {
+    color: #b29bd7;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    margin: 22px 0;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #f0e8ff;
+    color: #7048c8;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.step-card h3 {
+    margin: 0 0 10px;
+    color: #342d44;
+    font-size: 17px;
+}
+
+.step-card p {
+    margin: 0;
+    color: #81788d;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   TECHNOLOGY
+   ========================================================= */
+
+.technology-section {
+    background: #f7f3fc;
+}
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.technology-card {
+    min-height: 205px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ebe4f2;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(75, 50, 105, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.technology-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(75, 50, 105, 0.10);
+}
+
+.technology-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #f0e8ff;
+    color: #7048c8;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.technology-card h3 {
+    margin: 0 0 10px;
+    color: #342d44;
+}
+
+.technology-card p {
+    margin: 0;
+    color: #81788d;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Architecture page support */
+.wss-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.wss-flow-card {
+    width: 180px;
+    min-height: 120px;
+    padding: 21px;
+    background: #fff;
+    border: 1px solid #e7dfef;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(80, 57, 105, 0.05);
+}
+
+.wss-flow-card span {
+    margin-bottom: 12px;
+    color: #a184d7;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.wss-flow-card strong { color: #342d44; font-size: 14px; }
+.wss-flow-card small { margin-top: 7px; color: #91879e; line-height: 1.4; }
+.wss-flow-arrow { color: #9873d3; font-size: 22px; }
+
+/* =========================================================
+   WEARABLE / ABOUT
+   ========================================================= */
+
+.company-about {
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    background: #fff;
+}
+
+.company-about h2 {
+    margin: 12px 0;
+    color: #29233d;
+    font-size: clamp(32px, 4vw, 50px);
+    line-height: 1.15;
+}
+
+.company-about p {
+    color: #81788d;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* =========================================================
+   CTA + FOOTER
+   ========================================================= */
+
+.company-cta {
+    margin: 70px 8% 90px;
+    padding: 75px 25px;
+    text-align: center;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #7048c8, #8c62d6);
+    color: #fff;
+    box-shadow: 0 25px 60px rgba(112, 72, 200, 0.18);
+}
+
+.company-cta .section-label { color: #e8dcff; }
+
+.company-cta h2 {
+    margin: 12px auto 15px;
+    max-width: 700px;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+}
+
+.company-cta p:not(.section-label) {
+    color: #eee7fa;
+    margin-bottom: 30px;
+}
+
+.company-cta .primary-button {
+    background: #fff;
+    color: #7048c8;
+}
+
+.company-footer {
+    padding: 55px 8% 25px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    background: #29233d;
+    color: #fff;
+}
+
+.company-footer .company-logo h1 { color: #fff; }
+.company-footer .company-logo span { color: #aaa0bd; }
+
+.company-footer > div:first-child p {
+    max-width: 400px;
+    margin-top: 17px;
+    color: #aaa0bd;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #c3bbd0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover { color: #fff; }
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #9288a3;
+    font-size: 11px;
+}
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(255,255,255,0.98);
+    padding: 25px 22px;
+    overflow-y: auto;
+}
+
+.mobile-menu.active { display: block; }
+
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee7f5;
+}
+
+.mobile-menu-header strong {
+    color: #29233d;
+    font-size: 17px;
+}
+
+.mobile-menu-header button {
+    border: none;
+    background: #f2ecfa;
+    color: #7048c8;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+.mobile-menu-links a {
+    padding: 16px 14px;
+    color: #4c4559;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.mobile-menu-links a:hover,
+.mobile-menu-links a:focus-visible {
+    background: #f5effd;
+    color: #7048c8;
+}
+
+.mobile-menu-links .mobile-dashboard {
+    margin-top: 15px;
+    text-align: center;
+    background: #7048c8;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(112,72,200,0.2);
+}
+
+/* =========================================================
+   PUBLIC RESPONSIVE NAVBAR
+   ========================================================= */
+
+@media (max-width: 1180px) {
+    .desktop-nav { gap: 16px; }
+    .desktop-nav a { font-size: 12px; }
+    .company-nav { gap: 16px; }
+    .company-nav > a { font-size: 12px; }
+}
+
+@media (max-width: 1000px) {
+    .company-navbar { padding: 0 4%; }
+    .desktop-nav { gap: 12px; }
+    .company-nav { gap: 12px; }
+    .company-nav > a { font-size: 12px; }
+    .desktop-nav a:nth-child(2),
+    .desktop-nav a:nth-child(3),
+    .desktop-nav a:nth-child(4) {
+        display: none;
+    }
+
+    .company-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 70px 6%;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons { justify-content: center; }
+    .hero-visual { min-height: 430px; }
+
+    .steps-grid,
+    .technology-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .company-about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 760px) {
+    .company-logo h1 { font-size: 16px; }
+    .company-logo span { font-size: 8px; }
+
+    /* Hide desktop navigation and show hamburger */
+    .desktop-nav { display: none; }
+    .company-nav > a { display: none; }
+    .mobile-menu-button {
+        display: grid;
+        place-items: center;
+    }
+
+    .company-nav { margin-left: auto; }
+}
+
+@media (max-width: 650px) {
+    .company-navbar {
+        min-height: 68px;
+        padding: 0 18px;
+    }
+
+    .company-logo h1 { font-size: 15px; }
+    .company-logo span { font-size: 7px; }
+    .company-logo-mark { width: 38px; height: 38px; border-radius: 11px; }
+
+    .company-hero {
+        min-height: auto;
+        padding: 58px 20px 40px;
+        gap: 25px;
+    }
+
+    .hero-content h2 {
+        margin-top: 15px;
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-content p { font-size: 14px; line-height: 1.7; }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .company-home .primary-button,
+    .company-home .secondary-button { width: 100%; }
+
+    .hero-visual { min-height: 400px; }
+
+    .company-home .wearable {
+        width: 160px;
+        height: 255px;
+        border-radius: 35px;
+    }
+
+    .company-home .sos-button {
+        width: 82px;
+        height: 82px;
+        margin-top: 45px;
+    }
+
+    .alert-card-demo { top: 35px; right: -5px; }
+    .location-card-demo { bottom: 35px; left: -5px; }
+
+    .floating-card {
+        padding: 10px 12px;
+        transform: scale(0.82);
+    }
+
+    .company-intro,
+    .company-section,
+    .company-about { padding: 70px 20px; }
+
+    .company-intro h2,
+    .section-heading h2,
+    .company-about h2 { font-size: 34px; }
+
+    .steps-grid,
+    .technology-grid { grid-template-columns: 1fr; gap: 14px; }
+
+    .step-card,
+    .technology-card { padding: 24px; }
+
+    .company-about { text-align: center; }
+    .company-about .secondary-button { width: 100%; }
+
+    .wss-flow { flex-direction: column; }
+    .wss-flow-card { width: 100%; box-sizing: border-box; }
+    .wss-flow-arrow { transform: rotate(90deg); }
+
+    .company-cta {
+        margin: 30px 15px 60px;
+        padding: 60px 20px;
+        border-radius: 20px;
+    }
+
+    .company-cta h2 { font-size: 37px; }
+
+    .company-footer {
+        padding: 45px 20px 20px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-links { gap: 15px; }
+    .footer-bottom { grid-column: auto; }
+}
+
+@media (max-width: 380px) {
+    .company-logo h1 { font-size: 13px; }
+    .hero-content h2 { font-size: 37px; }
+    .hero-content p { font-size: 13px; }
+    .company-home .wearable { width: 145px; height: 235px; }
+    .company-home .sos-button { width: 75px; height: 75px; }
+}
+
+
+
+/* =====================================================
+   SAKHI - WOMEN SAFETY / HOW IT WORKS
+===================================================== */
+
+.safety-hero {
+    min-height: 680px;
+    padding: 80px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(226, 91, 139, .14), transparent 35%),
+        linear-gradient(135deg, #fff7fa, #ffffff);
+}
+
+.safety-hero-content {
+    max-width: 650px;
+}
+
+.safety-eyebrow {
+    display: inline-block;
+    color: #c33b73;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.safety-hero h1 {
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.02;
+    color: #29202a;
+    margin: 0 0 25px;
+}
+
+.safety-hero h1 strong {
+    display: block;
+    color: #c33b73;
+}
+
+.safety-hero p {
+    color: #756b73;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 580px;
+}
+
+.safety-hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.safety-primary-btn,
+.safety-outline-btn {
+    padding: 14px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.safety-primary-btn {
+    color: #fff;
+    background: #c33b73;
+    box-shadow: 0 12px 30px rgba(195, 59, 115, .22);
+}
+
+.safety-outline-btn {
+    color: #c33b73;
+    border: 1px solid #e4b8c9;
+    background: #fff;
+}
+
+
+/* HERO IMAGE */
+
+.safety-hero-image {
+    height: 500px;
+    position: relative;
+}
+
+.safety-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 45px;
+    box-shadow: 0 30px 70px rgba(91, 43, 65, .16);
+}
+
+.safety-image-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: rgba(255,255,255,.95);
+    padding: 14px 18px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #352831;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #35a66f;
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   SAFETY FLOW
+===================================================== */
+
+.safety-flow-section {
+    padding: 110px 7%;
+    background: #ffffff;
+}
+
+.safety-section-heading {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.safety-section-heading > span {
+    color: #c33b73;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.safety-section-heading h2 {
+    color: #29202a;
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.safety-section-heading h2 strong {
+    color: #c33b73;
+}
+
+.safety-section-heading p {
+    color: #7b7078;
+    line-height: 1.7;
+}
+
+
+/* TIMELINE */
+
+.safety-timeline {
+    max-width: 1000px;
+    margin: 80px auto 0;
+    position: relative;
+}
+
+.safety-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #edcbd8;
+    transform: translateX(-50%);
+}
+
+.safety-timeline-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80px 1fr 180px;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 75px;
+    position: relative;
+}
+
+.safety-timeline-item.reverse {
+    grid-template-columns: 180px 1fr 80px;
+}
+
+.safety-timeline-item.reverse .timeline-content {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.safety-timeline-item.reverse .timeline-visual {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.timeline-number {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #c33b73;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    padding: 30px;
+    border-radius: 24px;
+    background: #fff7fa;
+    border: 1px solid #f1dce5;
+}
+
+.timeline-tag {
+    color: #c33b73;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.timeline-content h3 {
+    color: #30252c;
+    margin: 10px 0;
+    font-size: 23px;
+}
+
+.timeline-content p {
+    color: #776d73;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.timeline-visual {
+    width: 145px;
+    height: 145px;
+    border-radius: 35px;
+    background: #f9e5ed;
+    display: grid;
+    place-items: center;
+    font-size: 55px;
+    box-shadow: 0 15px 40px rgba(195,59,115,.08);
+}
+
+.sos-visual {
+    background: #c33b73;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.backend-visual {
+    background: #eee5fa;
+}
+
+
+/* =====================================================
+   WOMEN SAFETY SECTION
+===================================================== */
+
+.women-safety-section {
+    padding: 100px 7%;
+    background: #fff7fa;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.women-safety-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+.women-safety-content h2 {
+    font-size: clamp(36px, 4vw, 55px);
+    color: #30252c;
+    line-height: 1.1;
+    margin: 10px 0 20px;
+}
+
+.women-safety-content h2 strong {
+    color: #c33b73;
+}
+
+.women-safety-content > p {
+    color: #776d73;
+    line-height: 1.8;
+}
+
+.safety-feature-list {
+    margin-top: 35px;
+}
+
+.safety-feature-list > div {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.safety-feature-list > div > span {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #c33b73;
+    color: white;
+    font-weight: bold;
+}
+
+.safety-feature-list h3 {
+    color: #30252c;
+    margin: 0 0 5px;
+}
+
+.safety-feature-list p {
+    color: #7b7078;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.safety-information {
+    padding: 90px 7%;
+    background: #30252c;
+    color: white;
+}
+
+.safety-info-intro {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.safety-info-intro span {
+    color: #e69ab7;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.safety-info-intro h2 {
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.1;
+    margin-top: 12px;
+}
+
+.safety-info-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.safety-info-item {
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px;
+    background: rgba(255,255,255,.05);
+}
+
+.info-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.safety-info-item h3 {
+    margin-bottom: 8px;
+}
+
+.safety-info-item p {
+    color: #cfc3ca;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .safety-hero {
+        grid-template-columns: 1fr;
+        padding: 65px 5%;
+    }
+
+    .safety-hero-image {
+        height: 400px;
+    }
+
+    .women-safety-section {
+        grid-template-columns: 1fr;
+        padding: 70px 5%;
+    }
+
+    .safety-info-items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .safety-line {
+        left: 27px;
+    }
+
+    .safety-timeline-item,
+    .safety-timeline-item.reverse {
+        grid-template-columns: 55px 1fr;
+        gap: 20px;
+    }
+
+    .timeline-number {
+        width: 55px;
+        height: 55px;
+    }
+
+    .timeline-content {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+    }
+
+    .timeline-visual,
+    .safety-timeline-item.reverse .timeline-visual {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .safety-hero h1 {
+        font-size: 45px;
+    }
+
+    .safety-hero-image {
+        height: 330px;
+    }
+
+    .safety-info-items {
+        grid-template-columns: 1fr;
+    }
+
+    .safety-flow-section {
+        padding: 75px 5%;
+    }
+
+    .safety-timeline {
+        margin-top: 55px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SAKHI — HOW IT WORKS
+   Women Safety System
+   Page-specific styling
+========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+========================================================= */
+
+body.company-home {
+    background: #fff9fc;
+    color: #30252c;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hiw-hero {
+    min-height: 650px;
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(195, 59, 115, 0.13),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(112, 72, 200, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fff8fb,
+            #ffffff
+        );
+}
+
+
+/* Decorative circle */
+
+.hiw-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -180px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(195, 59, 115, 0.12);
+}
+
+
+.hiw-hero-content {
+    max-width: 680px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hiw-hero-content .section-label {
+    color: #c33b73;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.hiw-hero-content h2 {
+    margin: 18px 0;
+
+    color: #29202a;
+
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+}
+
+
+.hiw-hero-content h2 span {
+    display: block;
+    color: #c33b73;
+}
+
+
+.hiw-hero-content > p:not(.section-label) {
+    max-width: 600px;
+
+    color: #756b73;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hiw-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+
+    margin-top: 30px;
+}
+
+
+.hiw-hero .primary-button,
+.hiw-hero .secondary-button,
+.hiw-cta .primary-button,
+.hiw-cta .secondary-button {
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.hiw-hero .primary-button,
+.hiw-cta .primary-button {
+
+    color: #fff;
+
+    background: #c33b73;
+
+    box-shadow:
+        0 10px 25px rgba(195, 59, 115, 0.22);
+}
+
+
+.hiw-hero .primary-button:hover,
+.hiw-cta .primary-button:hover {
+
+    background: #aa2f62;
+
+    transform: translateY(-2px);
+}
+
+
+.hiw-hero .secondary-button {
+
+    color: #7048c8;
+
+    background: #fff;
+
+    border: 1px solid #ddd3ef;
+}
+
+
+.hiw-hero .secondary-button:hover {
+
+    background: #f8f2ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO DEVICE
+========================================================= */
+
+.hiw-hero-visual {
+
+    min-height: 500px;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+
+/* Glow */
+
+.hiw-hero-visual::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(195, 59, 115, 0.20),
+            rgba(230, 215, 255, 0.12),
+            transparent 70%
+        );
+}
+
+
+/* Device */
+
+.hiw-device {
+
+    width: 195px;
+    height: 310px;
+
+    border-radius: 44px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f6edf4
+        );
+
+    border: 1px solid #e5dce8;
+
+    box-shadow:
+        0 30px 70px rgba(91, 43, 65, 0.16),
+        inset 0 0 25px rgba(195, 59, 115, 0.04);
+
+    transform: rotate(3deg);
+}
+
+
+.hiw-device-title {
+
+    color: #c33b73;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* SOS */
+
+.hiw-sos {
+
+    width: 105px;
+    height: 105px;
+
+    margin-top: 55px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #c33b73;
+
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 900;
+
+    box-shadow:
+        0 0 0 11px #f3dfe8,
+        0 14px 35px rgba(195, 59, 115, 0.25);
+}
+
+
+.hiw-device-status {
+
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #8d8490;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.hiw-device-status span {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #35a66f;
+
+    box-shadow: 0 0 8px rgba(53, 166, 111, 0.4);
+}
+
+
+/* =========================================================
+   FLOATING ALERT CARDS
+========================================================= */
+
+.hiw-floating-card {
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px 16px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e9e1ed;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 40px rgba(77, 54, 108, 0.12);
+
+    z-index: 4;
+
+    animation: hiwFloat 4s ease-in-out infinite;
+}
+
+
+.hiw-floating-card strong {
+
+    display: block;
+
+    color: #342d44;
+
+    font-size: 11px;
+}
+
+
+.hiw-floating-card small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #958ca2;
+
+    font-size: 9px;
+}
+
+
+.card-alert {
+
+    top: 80px;
+    right: 0;
+}
+
+
+.card-location {
+
+    bottom: 70px;
+    left: 0;
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes hiwFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.hiw-section {
+
+    padding: 105px 7%;
+
+    background: #ffffff;
+}
+
+
+.hiw-heading {
+
+    max-width: 750px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.hiw-heading .section-label {
+
+    color: #c33b73;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.hiw-heading h2 {
+
+    margin: 14px 0;
+
+    color: #29202a;
+
+    font-size: clamp(35px, 4vw, 54px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.hiw-heading h2 span {
+
+    color: #c33b73;
+}
+
+
+.hiw-heading > p:last-child {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #7b7078;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SYSTEM WORKFLOW
+========================================================= */
+
+.hiw-flow {
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr
+        auto
+        1fr
+        auto
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.hiw-step {
+
+    min-height: 300px;
+
+    padding: 28px;
+
+    border-radius: 22px;
+
+    background: #fff7fa;
+
+    border: 1px solid #f1dce5;
+
+    box-shadow:
+        0 12px 35px rgba(75, 50, 105, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.hiw-step:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #e5b6c8;
+
+    box-shadow:
+        0 20px 45px rgba(75, 50, 105, 0.10);
+}
+
+
+.hiw-step-number {
+
+    color: #c99bb0;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.hiw-step-icon {
+
+    width: 50px;
+    height: 50px;
+
+    margin: 22px 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: #f9e5ed;
+
+    color: #c33b73;
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+
+.hiw-step h3 {
+
+    margin: 0 0 10px;
+
+    color: #30252c;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+}
+
+
+.hiw-step p {
+
+    margin: 0;
+
+    color: #776d73;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.hiw-arrow {
+
+    color: #c33b73;
+
+    font-size: 22px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   INFORMATION SECTION
+========================================================= */
+
+.hiw-light {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #f9f5ff
+        );
+}
+
+
+.hiw-info-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.hiw-info-card {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #ebe4f2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(75, 50, 105, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.hiw-info-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(75, 50, 105, 0.10);
+}
+
+
+.hiw-info-card > div {
+
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 20px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: #f3eafb;
+
+    font-size: 21px;
+}
+
+
+.hiw-info-card h3 {
+
+    margin: 0 0 10px;
+
+    color: #342d44;
+
+    font-size: 16px;
+}
+
+
+.hiw-info-card p {
+
+    margin: 0;
+
+    color: #81788d;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CURRENT / FUTURE DEVELOPMENT
+========================================================= */
+
+.hiw-development {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.hiw-development-card {
+
+    position: relative;
+
+    padding: 38px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #faf7fd
+        );
+
+    border: 1px solid #e8e0ef;
+
+    box-shadow:
+        0 15px 40px rgba(75, 50, 105, 0.06);
+}
+
+
+.hiw-development-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    right: -90px;
+    bottom: -90px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(195, 59, 115, 0.12);
+}
+
+
+.hiw-badge {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    background: #f9e5ed;
+
+    color: #c33b73;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.hiw-development-card h3 {
+
+    margin: 20px 0;
+
+    color: #30252c;
+
+    font-size: 22px;
+}
+
+
+.hiw-development-card ul {
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+.hiw-development-card li {
+
+    position: relative;
+
+    padding: 10px 0 10px 27px;
+
+    color: #776d73;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #eee5eb;
+}
+
+
+.hiw-development-card li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #c33b73;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.hiw-cta {
+
+    margin: 60px 7% 90px;
+
+    padding: 80px 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.15),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #7048c8,
+            #c33b73
+        );
+
+    color: white;
+
+    box-shadow:
+        0 25px 60px rgba(112, 72, 200, 0.18);
+}
+
+
+.hiw-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    left: -200px;
+    top: -200px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+
+.hiw-cta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -130px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+
+.hiw-cta > * {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.hiw-cta .section-label {
+
+    color: #f3dcff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.hiw-cta h2 {
+
+    max-width: 750px;
+
+    margin: 12px auto;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.08;
+}
+
+
+.hiw-cta h2 span {
+
+    display: block;
+
+    color: #ffe1ec;
+}
+
+
+.hiw-cta > p:not(.section-label) {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #f4e9f0;
+
+    line-height: 1.7;
+}
+
+
+.hiw-cta .hiw-hero-buttons {
+
+    justify-content: center;
+}
+
+
+.hiw-cta .primary-button {
+
+    background: white;
+
+    color: #7048c8;
+}
+
+
+.hiw-cta .primary-button:hover {
+
+    background: #f8f5ff;
+}
+
+
+.hiw-cta .secondary-button {
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    background: rgba(255,255,255,.08);
+}
+
+
+.hiw-cta .secondary-button:hover {
+
+    background: rgba(255,255,255,.15);
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .hiw-flow {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .hiw-arrow {
+
+        display: none;
+    }
+
+    .hiw-step {
+
+        min-height: 270px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hiw-hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 70px 5%;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+
+    .hiw-hero-content {
+
+        margin: auto;
+    }
+
+
+    .hiw-hero-content > p:not(.section-label) {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hiw-hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hiw-hero-visual {
+
+        min-height: 450px;
+    }
+
+
+    .hiw-info-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .hiw-development {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .hiw-hero {
+
+        padding: 55px 20px 35px;
+    }
+
+
+    .hiw-hero-content h2 {
+
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hiw-hero-content > p:not(.section-label) {
+
+        font-size: 14px;
+    }
+
+
+    .hiw-hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .hiw-hero .primary-button,
+    .hiw-hero .secondary-button {
+
+        width: 100%;
+    }
+
+
+    .hiw-hero-visual {
+
+        min-height: 400px;
+    }
+
+
+    .hiw-device {
+
+        width: 165px;
+        height: 260px;
+
+        border-radius: 36px;
+    }
+
+
+    .hiw-sos {
+
+        width: 82px;
+        height: 82px;
+
+        margin-top: 43px;
+    }
+
+
+    .hiw-floating-card {
+
+        padding: 10px 12px;
+
+        transform: scale(.85);
+    }
+
+
+    .card-alert {
+
+        top: 30px;
+        right: -5px;
+    }
+
+
+    .card-location {
+
+        bottom: 30px;
+        left: -5px;
+    }
+
+
+    .hiw-section {
+
+        padding: 70px 20px;
+    }
+
+
+    .hiw-heading {
+
+        margin-bottom: 45px;
+    }
+
+
+    .hiw-heading h2 {
+
+        font-size: 34px;
+    }
+
+
+    .hiw-flow {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .hiw-step {
+
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+
+    .hiw-info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hiw-development-card {
+
+        padding: 27px;
+    }
+
+
+    .hiw-cta {
+
+        margin: 25px 15px 60px;
+
+        padding: 60px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .hiw-cta h2 {
+
+        font-size: 37px;
+    }
+
+
+    .hiw-cta .hiw-hero-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .hiw-cta .primary-button,
+    .hiw-cta .secondary-button {
+
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hiw-hero-content h2 {
+
+        font-size: 37px;
+    }
+
+
+    .hiw-device {
+
+        width: 150px;
+        height: 235px;
+    }
+
+
+    .hiw-sos {
+
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .hiw-heading h2 {
+
+        font-size: 31px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.hiw-hero a:focus-visible,
+.hiw-cta a:focus-visible {
+
+    outline: 3px solid rgba(195, 59, 115, .35);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hiw-floating-card {
+
+        animation: none;
+    }
+
+
+    .hiw-step,
+    .hiw-info-card,
+    .hiw-hero .primary-button,
+    .hiw-hero .secondary-button {
+
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* =========================================================
+   WEARABLE PAGE
+   Women Safety System
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE BASE
+   ========================================================= */
+
+body.wearable-page {
+    background:
+        radial-gradient(circle at 85% 10%, rgba(231, 91, 145, 0.10), transparent 28%),
+        radial-gradient(circle at 10% 35%, rgba(126, 87, 194, 0.08), transparent 25%),
+        #fff9fc;
+    color: #292332;
+}
+
+
+/* =========================================================
+   WEARABLE HERO
+   ========================================================= */
+
+.wearable-page .wearable-hero {
+    min-height: 650px;
+    padding: 100px 7%;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            120deg,
+            #fff9fc 0%,
+            #fff1f7 50%,
+            #f8f0ff 100%
+        );
+}
+
+
+/* Decorative background */
+
+.wearable-page .wearable-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(210, 67, 123, 0.08);
+    top: -180px;
+    right: -100px;
+    filter: blur(5px);
+}
+
+.wearable-page .wearable-hero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(119, 78, 177, 0.08);
+    bottom: -130px;
+    left: -100px;
+}
+
+
+/* Hero content */
+
+.wearable-page .wearable-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.wearable-page .wearable-label {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #fce3ed;
+    color: #b72d69;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 22px;
+}
+
+.wearable-page .wearable-hero-content h1 {
+    margin: 0 0 22px;
+    font-size: clamp(45px, 5.5vw, 78px);
+    line-height: 1.03;
+    letter-spacing: -3px;
+    color: #2d2535;
+}
+
+.wearable-page .wearable-hero-content h1 span {
+    display: block;
+    color: #c53572;
+}
+
+.wearable-page .wearable-hero-content p {
+    max-width: 610px;
+    margin: 0;
+    color: #716875;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+
+/* Hero buttons */
+
+.wearable-page .wearable-hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.wearable-page .wearable-primary-btn,
+.wearable-page .wearable-outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 750;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.wearable-page .wearable-primary-btn {
+    background: linear-gradient(135deg, #c73573, #8c4db5);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(190, 55, 113, 0.22);
+}
+
+.wearable-page .wearable-primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px rgba(190, 55, 113, 0.28);
+}
+
+.wearable-page .wearable-outline-btn {
+    border: 1px solid #e5cad8;
+    background: rgba(255, 255, 255, 0.75);
+    color: #8f315f;
+}
+
+.wearable-page .wearable-outline-btn:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(73, 42, 67, 0.08);
+}
+
+
+/* =========================================================
+   HERO DEVICE VISUAL
+   ========================================================= */
+
+.wearable-page .wearable-hero-visual {
+    min-height: 520px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.wearable-page .wearable-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(191, 55, 113, 0.14);
+}
+
+.wearable-page .circle-one {
+    width: 430px;
+    height: 430px;
+}
+
+.wearable-page .circle-two {
+    width: 330px;
+    height: 330px;
+    border-style: dashed;
+}
+
+
+/* Device */
+
+.wearable-page .smart-device {
+    width: 230px;
+    height: 330px;
+    border-radius: 48px;
+    background:
+        linear-gradient(
+            145deg,
+            #312c38,
+            #15131a
+        );
+    box-shadow:
+        0 35px 70px rgba(47, 31, 48, 0.30),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    transform: rotate(-5deg);
+}
+
+.wearable-page .device-top {
+    color: #f4c5d9;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.wearable-page .device-sos {
+    width: 125px;
+    height: 125px;
+    margin-top: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ff91ba,
+            #cf376f 45%,
+            #94264f 100%
+        );
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    box-shadow:
+        0 0 0 12px rgba(211, 56, 114, 0.08),
+        0 0 45px rgba(211, 56, 114, 0.45);
+}
+
+.wearable-page .device-light {
+    width: 9px;
+    height: 9px;
+    margin-top: 28px;
+    border-radius: 50%;
+    background: #55d98b;
+    box-shadow: 0 0 15px rgba(85, 217, 139, 0.8);
+}
+
+.wearable-page .device-bottom {
+    margin-top: 20px;
+    color: #8d8792;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Floating cards */
+
+.wearable-page .device-floating-card {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(226, 201, 215, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 18px 40px rgba(70, 43, 66, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.wearable-page .device-floating-card > span {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbe4ee;
+    color: #c0336d;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.wearable-page .device-floating-card strong {
+    display: block;
+    color: #302836;
+    font-size: 13px;
+}
+
+.wearable-page .device-floating-card small {
+    display: block;
+    margin-top: 3px;
+    color: #8b818b;
+    font-size: 11px;
+}
+
+.wearable-page .bluetooth-card {
+    top: 80px;
+    right: 0;
+}
+
+.wearable-page .phone-card {
+    bottom: 70px;
+    left: 0;
+}
+
+
+/* =========================================================
+   DEVICE INTRODUCTION
+   ========================================================= */
+
+.wearable-page .device-section {
+    padding: 105px 7%;
+    background: #ffffff;
+}
+
+.wearable-page .device-section-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.wearable-page .device-section-heading > span,
+.wearable-page .control-heading > span,
+.wearable-page .connection-heading > span,
+.wearable-page .architecture-heading > span,
+.wearable-page .future-heading > span {
+    color: #c0336d;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.wearable-page .device-section-heading h2,
+.wearable-page .control-heading h2,
+.wearable-page .connection-heading h2,
+.wearable-page .architecture-heading h2,
+.wearable-page .future-heading h2 {
+    margin: 14px 0 15px;
+    color: #302734;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.wearable-page .device-section-heading h2 strong,
+.wearable-page .control-heading h2 strong,
+.wearable-page .connection-heading h2 strong,
+.wearable-page .architecture-heading h2 strong,
+.wearable-page .future-heading h2 strong {
+    color: #c0336d;
+}
+
+.wearable-page .device-section-heading p,
+.wearable-page .control-heading p,
+.wearable-page .connection-heading p {
+    margin: 0;
+    color: #776d77;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* Feature grid */
+
+.wearable-page .device-feature-grid {
+    max-width: 1180px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.wearable-page .device-feature {
+    position: relative;
+    padding: 30px;
+    border-radius: 22px;
+    background: #fff9fc;
+    border: 1px solid #f0dce6;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.wearable-page .device-feature:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(72, 42, 65, 0.10);
+}
+
+.wearable-page .feature-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #e6d6df;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.wearable-page .feature-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7dfeb;
+    color: #bf326b;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 22px;
+}
+
+.wearable-page .device-feature h3 {
+    margin: 0 0 10px;
+    color: #302733;
+    font-size: 18px;
+}
+
+.wearable-page .device-feature p {
+    margin: 0;
+    color: #786f78;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DEVICE CONTROL
+   ========================================================= */
+
+.wearable-page .control-section {
+    padding: 110px 7%;
+    background: #302735;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.wearable-page .control-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(211, 55, 114, 0.10);
+    right: -170px;
+    top: -200px;
+}
+
+.wearable-page .control-heading {
+    max-width: 760px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.wearable-page .control-heading h2 {
+    color: #ffffff;
+}
+
+.wearable-page .control-heading p {
+    color: #c9c0ca;
+}
+
+.wearable-page .control-layout {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Control device */
+
+.wearable-page .control-device {
+    display: flex;
+    justify-content: center;
+}
+
+.wearable-page .control-device-body {
+    width: 230px;
+    height: 350px;
+    border-radius: 48px;
+    background: linear-gradient(145deg, #4b414f, #1b1820);
+    box-shadow:
+        0 35px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.wearable-page .control-device-name {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d9a8bd;
+    font-weight: 800;
+}
+
+.wearable-page .control-sos {
+    border: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-top: 50px;
+    background: linear-gradient(145deg, #ee5d99, #a92c60);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow:
+        0 0 0 12px rgba(226, 65, 126, 0.08),
+        0 15px 35px rgba(210, 54, 113, 0.35);
+}
+
+.wearable-page .control-indicator {
+    margin-top: 30px;
+    color: #65d995;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+
+/* Control steps */
+
+.wearable-page .control-steps {
+    display: grid;
+    gap: 18px;
+}
+
+.wearable-page .control-step {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 20px;
+    padding: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.045);
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.wearable-page .control-step:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.wearable-page .control-step-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c73573;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.wearable-page .control-step h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.wearable-page .control-step p {
+    margin: 0;
+    color: #bdb3be;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PHONE CONNECTION
+   ========================================================= */
+
+.wearable-page .connection-section {
+    padding: 110px 7%;
+    background: #fff9fc;
+}
+
+.wearable-page .connection-heading {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.wearable-page .connection-flow {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.wearable-page .connection-card {
+    width: 190px;
+    min-height: 205px;
+    padding: 25px;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid #edd9e4;
+    box-shadow: 0 15px 35px rgba(66, 38, 61, 0.07);
+    position: relative;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.wearable-page .connection-card:hover {
+    transform: translateY(-7px);
+}
+
+.wearable-page .connection-card.bluetooth {
+    background: linear-gradient(145deg, #fff2f7, #f7efff);
+}
+
+.wearable-page .connection-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7e1eb;
+    color: #bd326b;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.wearable-page .connection-number {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    color: #d8c6d0;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.wearable-page .connection-card h3 {
+    margin: 0 0 9px;
+    color: #342b36;
+    font-size: 16px;
+}
+
+.wearable-page .connection-card p {
+    margin: 0;
+    color: #817680;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.wearable-page .connection-arrow {
+    color: #c43a72;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   SYSTEM ARCHITECTURE
+   ========================================================= */
+
+.wearable-page .architecture-section {
+    padding: 105px 7%;
+    background: #ffffff;
+}
+
+.wearable-page .architecture-heading {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.wearable-page .architecture-box {
+    max-width: 1250px;
+    margin: auto;
+    padding: 35px 25px;
+    border-radius: 28px;
+    background: #fdf7fa;
+    border: 1px solid #f0dce6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.wearable-page .architecture-node {
+    min-width: 145px;
+    padding: 22px 15px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #ead7e2;
+    border-radius: 18px;
+}
+
+.wearable-page .node-icon {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7e1eb;
+    color: #bd326b;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.wearable-page .architecture-node h3 {
+    margin: 13px 0 5px;
+    font-size: 14px;
+    color: #332934;
+}
+
+.wearable-page .architecture-node p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #8a7d87;
+}
+
+.wearable-page .architecture-line {
+    color: #c13b70;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   SOS PROCESS
+   ========================================================= */
+
+.wearable-page .sos-process-section {
+    padding: 110px 7%;
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #f8f1ff
+        );
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.wearable-page .sos-process-content {
+    position: sticky;
+    top: 110px;
+}
+
+.wearable-page .sos-process-content > span {
+    color: #bd326b;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.wearable-page .sos-process-content h2 {
+    margin: 15px 0;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.08;
+    color: #302632;
+}
+
+.wearable-page .sos-process-content h2 strong {
+    color: #bd326b;
+}
+
+.wearable-page .sos-process-content p {
+    color: #786e78;
+    line-height: 1.8;
+}
+
+.wearable-page .sos-process-list {
+    display: grid;
+    gap: 14px;
+}
+
+.wearable-page .sos-process-item {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 18px;
+    align-items: center;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #eddce5;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(66, 38, 61, 0.05);
+}
+
+.wearable-page .sos-process-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5dce8;
+    color: #bd326b;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.wearable-page .sos-process-item h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: #352b35;
+}
+
+.wearable-page .sos-process-item p {
+    margin: 0;
+    color: #817680;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FUTURE FEATURES
+   ========================================================= */
+
+.wearable-page .future-section {
+    padding: 110px 7%;
+    background: #ffffff;
+}
+
+.wearable-page .future-heading {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.wearable-page .future-grid {
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: auto;
+}
+
+.wearable-page .future-grid article {
+    padding: 28px;
+    border-radius: 20px;
+    background: #fff9fc;
+    border: 1px solid #eddce5;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.wearable-page .future-grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(69, 40, 63, 0.08);
+}
+
+.wearable-page .future-grid article > span {
+    color: #c13b70;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.wearable-page .future-grid h3 {
+    margin: 20px 0 10px;
+    color: #332934;
+    font-size: 17px;
+}
+
+.wearable-page .future-grid p {
+    margin: 0;
+    color: #817680;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROTOTYPE STATUS
+   ========================================================= */
+
+.wearable-page .prototype-section {
+    padding: 80px 7%;
+    background: #f8f1f5;
+}
+
+.wearable-page .prototype-box {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #ead7e2;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(66, 38, 61, 0.06);
+}
+
+.wearable-page .prototype-icon {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f8ef;
+    color: #28985c;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.wearable-page .prototype-box > div:last-child > span {
+    color: #c13b70;
+    font-size: 11px;
+    letter-spacing: 1.7px;
+    font-weight: 850;
+}
+
+.wearable-page .prototype-box h2 {
+    margin: 9px 0;
+    color: #342a34;
+    font-size: 24px;
+}
+
+.wearable-page .prototype-box p {
+    margin: 0;
+    color: #776d77;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   WEARABLE CTA
+   ========================================================= */
+
+.wearable-page .wearable-cta {
+    padding: 100px 7%;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(211, 55, 114, 0.22),
+            transparent 40%
+        ),
+        #2d2533;
+    color: #ffffff;
+}
+
+.wearable-page .wearable-cta > span {
+    color: #edb4cc;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.wearable-page .wearable-cta h2 {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.08;
+}
+
+.wearable-page .wearable-cta h2 strong {
+    color: #ed6d9e;
+}
+
+.wearable-page .wearable-cta p {
+    color: #c9c0ca;
+    margin-bottom: 30px;
+}
+
+.wearable-page .wearable-cta > div {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.wearable-page a:focus-visible,
+.wearable-page button:focus-visible {
+    outline: 3px solid rgba(215, 72, 128, 0.35);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .wearable-page .wearable-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .wearable-page .wearable-hero-content {
+        margin: auto;
+    }
+
+    .wearable-page .wearable-hero-content p {
+        margin: auto;
+    }
+
+    .wearable-page .wearable-hero-buttons {
+        justify-content: center;
+    }
+
+    .wearable-page .device-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wearable-page .connection-flow {
+        flex-wrap: wrap;
+    }
+
+    .wearable-page .future-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wearable-page .sos-process-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .wearable-page .sos-process-content {
+        position: static;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .wearable-page .wearable-hero {
+        padding: 70px 5%;
+        min-height: auto;
+    }
+
+    .wearable-page .wearable-hero-content h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+    }
+
+    .wearable-page .wearable-hero-content p {
+        font-size: 15px;
+    }
+
+    .wearable-page .wearable-hero-visual {
+        min-height: 430px;
+    }
+
+    .wearable-page .wearable-circle {
+        transform: scale(0.75);
+    }
+
+    .wearable-page .smart-device {
+        transform: scale(0.82) rotate(-5deg);
+    }
+
+    .wearable-page .bluetooth-card {
+        right: -5px;
+        top: 35px;
+    }
+
+    .wearable-page .phone-card {
+        left: -5px;
+        bottom: 35px;
+    }
+
+    .wearable-page .device-section,
+    .wearable-page .connection-section,
+    .wearable-page .architecture-section,
+    .wearable-page .future-section {
+        padding: 75px 5%;
+    }
+
+    .wearable-page .device-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wearable-page .control-section,
+    .wearable-page .sos-process-section {
+        padding: 75px 5%;
+    }
+
+    .wearable-page .control-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .wearable-page .control-device {
+        order: 1;
+    }
+
+    .wearable-page .control-steps {
+        order: 2;
+    }
+
+    .wearable-page .connection-flow {
+        flex-direction: column;
+    }
+
+    .wearable-page .connection-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .wearable-page .connection-arrow {
+        transform: rotate(90deg);
+    }
+
+    .wearable-page .architecture-box {
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow-x: visible;
+    }
+
+    .wearable-page .architecture-line {
+        transform: rotate(90deg);
+        height: 20px;
+    }
+
+    .wearable-page .architecture-node {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .wearable-page .future-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wearable-page .prototype-box {
+        flex-direction: column;
+    }
+
+    .wearable-page .wearable-cta {
+        padding: 75px 5%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .wearable-page .wearable-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .wearable-page .wearable-hero-buttons {
+        flex-direction: column;
+    }
+
+    .wearable-page .wearable-primary-btn,
+    .wearable-page .wearable-outline-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .wearable-page .wearable-hero-visual {
+        min-height: 390px;
+    }
+
+    .wearable-page .smart-device {
+        transform: scale(0.68) rotate(-5deg);
+    }
+
+    .wearable-page .wearable-circle {
+        transform: scale(0.58);
+    }
+
+    .wearable-page .device-floating-card {
+        padding: 10px 12px;
+    }
+
+    .wearable-page .device-floating-card strong {
+        font-size: 11px;
+    }
+
+    .wearable-page .device-floating-card small {
+        font-size: 9px;
+    }
+
+    .wearable-page .control-device-body {
+        transform: scale(0.85);
+        margin: -25px 0;
+    }
+
+    .wearable-page .control-step {
+        grid-template-columns: 45px 1fr;
+        padding: 17px;
+    }
+
+    .wearable-page .sos-process-item {
+        grid-template-columns: 45px 1fr;
+        padding: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .wearable-page *,
+    .wearable-page *::before,
+    .wearable-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CONTACT / EMERGENCY SUPPORT PAGE
+   ========================================================= */
+
+body.contact-page {
+    background: #fff8fb;
+    color: #302632;
+}
+
+
+/* =========================================================
+   CONTACT HERO
+   ========================================================= */
+
+.contact-page .contact-hero {
+    min-height: 620px;
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(211, 55, 114, .15), transparent 30%),
+        linear-gradient(135deg, #fff8fb, #f7efff);
+    overflow: hidden;
+}
+
+.contact-page .contact-hero-content {
+    max-width: 650px;
+}
+
+.contact-page .contact-eyebrow,
+.contact-page .contact-section-title > span,
+.contact-page .priority-content > span,
+.contact-page .safety-contact-section span,
+.contact-page .contact-cta > span {
+    color: #bd326b;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.contact-page .contact-hero h1 {
+    margin: 18px 0;
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+}
+
+.contact-page .contact-hero h1 span {
+    color: #c53572;
+}
+
+.contact-page .contact-hero p {
+    max-width: 590px;
+    color: #766c77;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.contact-page .contact-hero-buttons,
+.contact-page .contact-cta > div {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-page .emergency-button,
+.contact-page .contact-primary-button,
+.contact-page .contact-secondary-button,
+.contact-page .contact-outline-button,
+.contact-page .call-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 12px;
+    transition: .25s ease;
+}
+
+.contact-page .emergency-button {
+    padding: 15px 25px;
+    background: #bd285f;
+    color: white;
+    box-shadow: 0 12px 30px rgba(189, 40, 95, .25);
+}
+
+.contact-page .emergency-button:hover {
+    transform: translateY(-3px);
+}
+
+.contact-page .contact-secondary-button {
+    padding: 15px 25px;
+    border: 1px solid #e2cbd7;
+    color: #9b315f;
+    background: white;
+}
+
+
+/* Emergency visual */
+
+.contact-page .emergency-visual {
+    min-height: 470px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-page .emergency-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(189, 50, 107, .2);
+}
+
+.contact-page .ring-one {
+    width: 400px;
+    height: 400px;
+}
+
+.contact-page .ring-two {
+    width: 290px;
+    height: 290px;
+    border-style: dashed;
+}
+
+.contact-page .emergency-center {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d9407c, #8e2e60);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 60px rgba(130, 36, 82, .28);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-page .emergency-center span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.contact-page .emergency-center strong {
+    font-size: 58px;
+    line-height: 1;
+    margin: 8px 0;
+}
+
+.contact-page .emergency-center small {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.contact-page .emergency-mini-card {
+    position: absolute;
+    padding: 14px 18px;
+    background: white;
+    border: 1px solid #ecd8e3;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(60, 35, 57, .1);
+}
+
+.contact-page .emergency-mini-card strong,
+.contact-page .emergency-mini-card small {
+    display: block;
+}
+
+.contact-page .emergency-mini-card strong {
+    font-size: 12px;
+    color: #b92f68;
+}
+
+.contact-page .emergency-mini-card small {
+    margin-top: 4px;
+    font-size: 10px;
+    color: #817580;
+}
+
+.contact-page .card-one {
+    top: 70px;
+    right: 20px;
+}
+
+.contact-page .card-two {
+    bottom: 70px;
+    left: 20px;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.contact-page .contact-section-title {
+    max-width: 780px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.contact-page .contact-section-title h2,
+.contact-page .priority-content h2 {
+    margin: 15px 0;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.contact-page .contact-section-title h2 strong,
+.contact-page .priority-content h2 strong,
+.contact-page .safety-contact-section h2 strong {
+    color: #c0336d;
+}
+
+.contact-page .contact-section-title p,
+.contact-page .priority-content p {
+    color: #786e78;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DEVICE EMERGENCY FLOW
+   ========================================================= */
+
+.contact-page .device-emergency-section {
+    padding: 105px 7%;
+    background: white;
+}
+
+.contact-page .emergency-flow {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact-page .emergency-flow-card {
+    width: 200px;
+    min-height: 215px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #fff9fc;
+    border: 1px solid #ecd9e4;
+    text-align: center;
+    position: relative;
+}
+
+.contact-page .flow-number {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    color: #d9c9d2;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.contact-page .flow-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6dfeb;
+    color: #bc316a;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.contact-page .emergency-flow-card h3 {
+    margin: 0 0 9px;
+    font-size: 16px;
+}
+
+.contact-page .emergency-flow-card p {
+    margin: 0;
+    color: #817680;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.contact-page .flow-arrow {
+    color: #bd326b;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TRUSTED CONTACTS
+   ========================================================= */
+
+.contact-page .trusted-contact-section {
+    padding: 110px 7%;
+    background: #fff8fb;
+}
+
+.contact-page .trusted-contact-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-page .trusted-card {
+    padding: 30px;
+    background: white;
+    border: 1px solid #ecdbe4;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(65, 37, 61, .06);
+}
+
+.contact-page .trusted-card-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-page .contact-badge {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #f6dfeb;
+    color: #b82e67;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.contact-page .contact-priority {
+    color: #d5c4cd;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.contact-page .trusted-icon {
+    width: 58px;
+    height: 58px;
+    margin: 30px 0 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7e2eb;
+    color: #bd326b;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.contact-page .trusted-card h3 {
+    margin: 0 0 12px;
+}
+
+.contact-page .trusted-card p {
+    color: #7b707a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.contact-page .trusted-example {
+    margin-top: 22px;
+    padding-top: 17px;
+    border-top: 1px solid #eee1e7;
+}
+
+.contact-page .trusted-example strong,
+.contact-page .trusted-example span {
+    display: block;
+}
+
+.contact-page .trusted-example strong {
+    font-size: 10px;
+    color: #b92f68;
+    letter-spacing: 1px;
+}
+
+.contact-page .trusted-example span {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #635963;
+}
+
+
+/* =========================================================
+   PRIORITY RESPONSE
+   ========================================================= */
+
+.contact-page .priority-section {
+    padding: 110px 7%;
+    background: #302735;
+    color: white;
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 80px;
+}
+
+.contact-page .priority-content {
+    max-width: 550px;
+}
+
+.contact-page .priority-content h2 {
+    color: white;
+}
+
+.contact-page .priority-content p {
+    color: #c8bfca;
+}
+
+.contact-page .priority-timeline {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-page .priority-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 18px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.09);
+}
+
+.contact-page .priority-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c43873;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.contact-page .priority-item h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.contact-page .priority-item p {
+    margin: 0;
+    color: #bdb4bf;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   GOVERNMENT HELPLINES
+   ========================================================= */
+
+.contact-page .helpline-section {
+    padding: 110px 7%;
+    background: white;
+}
+
+.contact-page .helpline-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contact-page .helpline-card {
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #ead9e2;
+    background: #fffafd;
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-page .helpline-card.emergency {
+    border-color: #e6b5c8;
+    background: #fff4f7;
+}
+
+.contact-page .helpline-number {
+    font-size: 27px;
+    font-weight: 900;
+    color: #b72d65;
+    word-break: break-word;
+}
+
+.contact-page .helpline-info span {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    color: #b72d65;
+}
+
+.contact-page .helpline-info h3 {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+.contact-page .helpline-info p {
+    margin: 0;
+    color: #7c727b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.contact-page .call-button {
+    grid-column: 1 / -1;
+    min-height: 42px;
+    background: #bd326b;
+    color: white;
+}
+
+.contact-page .call-button:hover {
+    transform: translateY(-2px);
+    background: #a9285d;
+}
+
+
+/* =========================================================
+   MAHARASHTRA
+   ========================================================= */
+
+.contact-page .state-support-section {
+    padding: 70px 7%;
+    background: #f8f0f4;
+}
+
+.contact-page .state-support-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background: white;
+    border-radius: 22px;
+    border: 1px solid #ead9e2;
+}
+
+.contact-page .state-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5dce8;
+    color: #bd326b;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.contact-page .state-support-box > div:last-child > span {
+    font-size: 10px;
+    color: #bd326b;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.contact-page .state-support-box h2 {
+    margin: 8px 0;
+}
+
+.contact-page .state-support-box p {
+    margin: 0;
+    color: #786e78;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SAFETY INFORMATION
+   ========================================================= */
+
+.contact-page .safety-contact-section {
+    padding: 100px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    background: #fff9fc;
+}
+
+.contact-page .safety-contact-section h2 {
+    font-size: clamp(32px, 4vw, 50px);
+    line-height: 1.1;
+}
+
+.contact-page .safety-contact-section p {
+    color: #786e78;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT CTA
+   ========================================================= */
+
+.contact-page .contact-cta {
+    padding: 100px 7%;
+    text-align: center;
+    background: #2d2533;
+    color: white;
+}
+
+.contact-page .contact-cta h2 {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.08;
+}
+
+.contact-page .contact-cta p {
+    color: #c9c0ca;
+}
+
+.contact-page .contact-primary-button {
+    padding: 14px 24px;
+    background: #c43873;
+    color: white;
+}
+
+.contact-page .contact-outline-button {
+    padding: 14px 24px;
+    border: 1px solid rgba(255,255,255,.2);
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-page .contact-hero,
+    .contact-page .priority-section,
+    .contact-page .safety-contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page .contact-hero-content {
+        text-align: center;
+        margin: auto;
+    }
+
+    .contact-page .contact-hero p {
+        margin: auto;
+    }
+
+    .contact-page .contact-hero-buttons {
+        justify-content: center;
+    }
+
+    .contact-page .trusted-contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .contact-page .emergency-flow {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .contact-page .contact-hero {
+        padding: 70px 5%;
+    }
+
+    .contact-page .contact-hero h1 {
+        font-size: 44px;
+    }
+
+    .contact-page .emergency-visual {
+        min-height: 390px;
+    }
+
+    .contact-page .ring-one {
+        width: 320px;
+        height: 320px;
+    }
+
+    .contact-page .ring-two {
+        width: 240px;
+        height: 240px;
+    }
+
+    .contact-page .emergency-center {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact-page .emergency-center strong {
+        font-size: 45px;
+    }
+
+    .contact-page .card-one {
+        right: 0;
+    }
+
+    .contact-page .card-two {
+        left: 0;
+    }
+
+    .contact-page .device-emergency-section,
+    .contact-page .trusted-contact-section,
+    .contact-page .helpline-section {
+        padding: 75px 5%;
+    }
+
+    .contact-page .priority-section,
+    .contact-page .safety-contact-section {
+        padding: 75px 5%;
+    }
+
+    .contact-page .emergency-flow {
+        flex-direction: column;
+    }
+
+    .contact-page .emergency-flow-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .contact-page .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .contact-page .helpline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page .helpline-card {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .contact-page .state-support-box {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .contact-page .contact-hero h1 {
+        font-size: 38px;
+    }
+
+    .contact-page .contact-hero-buttons,
+    .contact-page .contact-cta > div {
+        flex-direction: column;
+    }
+
+    .contact-page .emergency-button,
+    .contact-page .contact-secondary-button,
+    .contact-page .contact-primary-button,
+    .contact-page .contact-outline-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-page .helpline-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page .helpline-number {
+        font-size: 30px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ACCOUNT / LOGIN PAGE
+   ========================================================= */
+
+.account-page {
+    background: #f8f6ff;
+    color: #272238;
+}
+
+/* MAIN */
+
+.account-main {
+    min-height: calc(100vh - 90px);
+    padding: 80px 6%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(180, 78, 255, .12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255, 80, 150, .12),
+            transparent 30%
+        ),
+        #f8f6ff;
+}
+
+/* CONTAINER */
+
+.account-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 80px;
+    align-items: center;
+}
+
+/* LEFT */
+
+.account-intro {
+    max-width: 570px;
+}
+
+.account-logo-big {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8e44ff,
+            #df3c91
+        );
+
+    color: white;
+
+    font-size: 23px;
+    font-weight: 900;
+
+    box-shadow:
+        0 18px 40px rgba(137, 57, 190, .25);
+
+    margin-bottom: 28px;
+}
+
+.account-label {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #9a3eb6;
+}
+
+.account-intro h1 {
+    margin: 15px 0 20px;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.03;
+
+    letter-spacing: -3px;
+}
+
+.account-intro h1 span {
+    color: #cf438d;
+}
+
+.account-intro > p {
+    max-width: 520px;
+
+    color: #766e7d;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+/* FEATURES */
+
+.account-features {
+    margin-top: 40px;
+
+    display: grid;
+    gap: 18px;
+}
+
+.account-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.account-feature-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #eee3ff;
+
+    color: #873fba;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.account-feature strong,
+.account-feature span {
+    display: block;
+}
+
+.account-feature strong {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.account-feature span {
+    color: #817888;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ACCOUNT CARD
+   ========================================================= */
+
+.account-card {
+    background: rgba(255,255,255,.95);
+
+    border: 1px solid #e7dff0;
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 25px 70px rgba(49, 31, 68, .12);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* TABS */
+
+.account-tabs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 5px;
+
+    background: #f2edf7;
+
+    border-radius: 13px;
+
+    margin-bottom: 32px;
+}
+
+.account-tab {
+    border: none;
+
+    background: transparent;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    color: #817689;
+
+    transition: .25s ease;
+}
+
+.account-tab.active {
+    background: white;
+
+    color: #9c3bb9;
+
+    box-shadow:
+        0 5px 15px rgba(50, 30, 70, .08);
+}
+
+
+/* FORMS */
+
+.account-form {
+    display: none;
+}
+
+.account-form.active {
+    display: block;
+}
+
+.form-heading span {
+    color: #b03d9c;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+.form-heading h2 {
+    margin: 9px 0 7px;
+
+    font-size: 27px;
+
+    letter-spacing: -.7px;
+}
+
+.form-heading p {
+    margin: 0 0 27px;
+
+    color: #817888;
+
+    font-size: 13px;
+}
+
+
+/* FORM GROUP */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #514759;
+}
+
+.form-group input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e3dbe9;
+
+    background: #fbf9fd;
+
+    border-radius: 11px;
+
+    padding: 13px 14px;
+
+    outline: none;
+
+    color: #30283a;
+
+    font-size: 13px;
+
+    transition: .25s ease;
+}
+
+.form-group input::placeholder {
+    color: #aaa1af;
+}
+
+.form-group input:focus {
+    border-color: #b34ab7;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(179, 74, 183, .08);
+}
+
+
+/* SUBMIT */
+
+.account-submit {
+    width: 100%;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #893cff,
+            #d43e8d
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 850;
+
+    box-shadow:
+        0 12px 25px rgba(151, 55, 181, .22);
+
+    transition: .25s ease;
+}
+
+.account-submit span {
+    margin-left: 8px;
+}
+
+.account-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 30px rgba(151, 55, 181, .3);
+}
+
+
+/* SWITCH */
+
+.form-switch {
+    text-align: center;
+
+    margin: 22px 0 0;
+
+    color: #837988;
+
+    font-size: 12px;
+}
+
+.form-switch button {
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    color: #a23eb7;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.form-note {
+    color: #958b99;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    margin: 16px 0;
+}
+
+
+/* MESSAGE */
+
+.account-message {
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.account-message.success {
+    display: block;
+
+    background: #edf9f2;
+
+    border: 1px solid #c8ecd7;
+
+    color: #267247;
+}
+
+.account-message.error {
+    display: block;
+
+    background: #fff0f3;
+
+    border: 1px solid #f0ccd5;
+
+    color: #a92f4b;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .account-container {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        gap: 50px;
+    }
+
+    .account-intro {
+        text-align: center;
+
+        margin: auto;
+    }
+
+    .account-logo-big {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .account-intro > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .account-features {
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .account-main {
+        padding: 55px 5%;
+    }
+
+    .account-intro h1 {
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+    .account-card {
+        padding: 25px 20px;
+
+        border-radius: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .account-intro h1 {
+        font-size: 37px;
+    }
+
+    .account-main {
+        padding: 40px 4%;
+    }
+
+    .account-card {
+        padding: 20px 16px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   USER SAFETY PROFILE PAGE
+   ========================================================= */
+
+.profile-page {
+    background: #f7f5fb;
+    color: #292334;
+}
+
+/* =========================================================
+   PROFILE MAIN
+   ========================================================= */
+
+.profile-main {
+    min-height: calc(100vh - 90px);
+    padding: 65px 7% 90px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(143, 68, 255, .10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(224, 59, 137, .09),
+            transparent 25%
+        ),
+        #f7f5fb;
+}
+
+
+/* =========================================================
+   PROFILE HERO
+   ========================================================= */
+
+.profile-hero {
+    max-width: 1180px;
+    margin: 0 auto 35px;
+
+    padding: 30px 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    background: rgba(255,255,255,.88);
+
+    border: 1px solid #e6deec;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 45px rgba(49, 32, 63, .07);
+}
+
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8c43ff,
+            #d83e8d
+        );
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    box-shadow:
+        0 12px 30px rgba(138, 58, 190, .22);
+}
+
+.profile-heading {
+    flex: 1;
+}
+
+.profile-heading > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a13db5;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.profile-heading h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    letter-spacing: -.8px;
+}
+
+.profile-heading h1 strong {
+    color: #c83d87;
+}
+
+.profile-heading p {
+    margin: 7px 0 0;
+
+    color: #817889;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.profile-logout {
+    border: 1px solid #e2d6e7;
+
+    background: white;
+
+    color: #963f9e;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition: .25s ease;
+}
+
+.profile-logout:hover {
+    background: #f9effb;
+
+    border-color: #cda4d4;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PROFILE GRID
+   ========================================================= */
+
+.profile-grid {
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+   ========================================================= */
+
+.profile-card {
+    background: white;
+
+    border: 1px solid #e7dfe9;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(48, 33, 60, .06);
+
+    transition: .25s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 42px rgba(48, 33, 60, .09);
+}
+
+.profile-card-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+}
+
+.profile-card-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f0e7ff;
+
+    color: #8740bd;
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+.profile-card-heading span {
+    display: block;
+
+    color: #a03eae;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 5px;
+}
+
+.profile-card-heading h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    letter-spacing: -.4px;
+}
+
+
+/* =========================================================
+   PERSONAL DETAILS
+   ========================================================= */
+
+.profile-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+.profile-detail {
+    padding: 15px;
+
+    background: #faf8fc;
+
+    border: 1px solid #eee7f1;
+
+    border-radius: 13px;
+}
+
+.profile-detail span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #918694;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.profile-detail strong {
+    display: block;
+
+    color: #393040;
+
+    font-size: 13px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   EMERGENCY CONTACT
+   ========================================================= */
+
+.emergency-profile-card {
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #fff8fb
+        );
+}
+
+.emergency-contact-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: #fff4f7;
+
+    border: 1px solid #f0d6df;
+}
+
+.contact-status-dot {
+    width: 11px;
+    height: 11px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #35b86a;
+
+    box-shadow:
+        0 0 0 5px rgba(53,184,106,.10);
+}
+
+.emergency-contact-box span,
+.emergency-contact-box strong,
+.emergency-contact-box small {
+    display: block;
+}
+
+.emergency-contact-box span {
+    color: #b23c67;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.emergency-contact-box strong {
+    margin-top: 5px;
+
+    color: #40333d;
+
+    font-size: 17px;
+}
+
+.emergency-contact-box small {
+    margin-top: 4px;
+
+    color: #91828b;
+
+    font-size: 10px;
+}
+
+.profile-card-note {
+    margin: 18px 0 0;
+
+    color: #817680;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   WEARABLE CARD
+   ========================================================= */
+
+.wearable-profile-card {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8f3ff
+        );
+}
+
+.wearable-icon {
+    background: #ece4ff;
+    color: #7742bd;
+}
+
+.device-status {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 17px;
+
+    background: #f7f5ff;
+
+    border: 1px solid #e8e1f3;
+
+    border-radius: 15px;
+}
+
+.device-status-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.online-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #32b968;
+
+    box-shadow:
+        0 0 0 5px rgba(50,185,104,.10);
+}
+
+.device-status-left strong,
+.device-status-left span {
+    display: block;
+}
+
+.device-status-left strong {
+    font-size: 13px;
+}
+
+.device-status-left span {
+    margin-top: 3px;
+
+    color: #8a8190;
+
+    font-size: 10px;
+}
+
+.device-online {
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #e9f8ef;
+
+    color: #27804b;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* DEVICE INFORMATION */
+
+.device-information {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.device-information > div {
+    padding: 14px;
+
+    border-radius: 13px;
+
+    background: white;
+
+    border: 1px solid #ebe4ef;
+}
+
+.device-information span,
+.device-information strong {
+    display: block;
+}
+
+.device-information span {
+    color: #968b99;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .8px;
+}
+
+.device-information strong {
+    margin-top: 7px;
+
+    color: #423748;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SAFETY SETTINGS
+   ========================================================= */
+
+.safety-settings-card {
+    background: #302638;
+
+    color: white;
+
+    border-color: #302638;
+}
+
+.safety-settings-card .profile-card-icon {
+    background: rgba(255,255,255,.09);
+
+    color: #e9a7ce;
+}
+
+.safety-settings-card .profile-card-heading span {
+    color: #d99bc0;
+}
+
+.safety-settings-card .profile-card-heading h2 {
+    color: white;
+}
+
+.safety-setting-list {
+    display: grid;
+
+    gap: 12px;
+}
+
+.safety-setting {
+    display: grid;
+
+    grid-template-columns: 38px 1fr auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.055);
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.setting-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(221,91,155,.15);
+
+    color: #e89ac5;
+
+    font-size: 12px;
+
+    font-weight: 900;
+}
+
+.safety-setting strong,
+.safety-setting span {
+    display: block;
+}
+
+.safety-setting strong {
+    font-size: 12px;
+}
+
+.safety-setting span {
+    margin-top: 3px;
+
+    color: #bdb3c1;
+
+    font-size: 9px;
+}
+
+.safety-setting b {
+    padding: 5px 8px;
+
+    border-radius: 15px;
+
+    background: rgba(72,192,112,.12);
+
+    color: #78d59a;
+
+    font-size: 7px;
+
+    letter-spacing: .8px;
+}
+
+
+/* =========================================================
+   SAFETY NOTICE
+   ========================================================= */
+
+.profile-safety-notice {
+    max-width: 1180px;
+
+    margin: 25px auto 0;
+
+    padding: 28px 32px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0e9ff,
+            #fff0f7
+        );
+
+    border: 1px solid #e3d7ee;
+
+    border-radius: 22px;
+}
+
+.notice-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9147ff,
+            #d8418d
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+.profile-safety-notice span {
+    color: #9b3dae;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.profile-safety-notice h2 {
+    margin: 7px 0;
+
+    font-size: 20px;
+
+    letter-spacing: -.4px;
+}
+
+.profile-safety-notice p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #786f7e;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-main {
+        padding: 50px 5% 70px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .profile-hero {
+        padding: 24px;
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+
+        border-radius: 17px;
+    }
+
+    .profile-heading {
+        width: calc(100% - 85px);
+    }
+
+    .profile-heading h1 {
+        font-size: 24px;
+    }
+
+    .profile-heading p {
+        font-size: 11px;
+    }
+
+    .profile-logout {
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .device-information {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-safety-notice {
+        padding: 23px;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .profile-main {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .profile-heading h1 {
+        font-size: 21px;
+    }
+
+    .profile-card-heading h2 {
+        font-size: 18px;
+    }
+
+    .safety-setting {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .safety-setting b {
+        grid-column: 2;
+
+        justify-self: start;
+    }
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   PROFILE EDIT BUTTON
+===================================================== */
+
+.profile-action-button {
+    margin-top: 22px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =====================================================
+   PROFILE MODAL
+===================================================== */
+
+.profile-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 10, 30, 0.72);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 9999;
+}
+
+.profile-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.profile-modal-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 520px;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(25px) scale(0.96);
+
+    transition: 0.3s ease;
+}
+
+.profile-modal.active .profile-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+
+.profile-modal-close {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f4f1f8;
+
+    color: #333;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.profile-modal-close:hover {
+    background: #eee5f7;
+    transform: rotate(90deg);
+}
+
+
+.profile-modal-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #a855f7;
+}
+
+
+.profile-modal-card h2 {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+
+    color: #17121f;
+}
+
+
+.profile-modal-card > p {
+    margin-bottom: 25px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   MODAL FORM
+===================================================== */
+
+.modal-form-group {
+    margin-bottom: 17px;
+}
+
+
+.modal-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #403749;
+}
+
+
+.modal-form-group input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd5e5;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.modal-form-group input:focus {
+    border-color: #9b5de5;
+
+    box-shadow:
+        0 0 0 3px rgba(155, 93, 229, 0.12);
+}
+
+
+.profile-save-button {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #ec4899
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.profile-save-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =====================================================
+   EDIT MESSAGE
+===================================================== */
+
+.profile-edit-message {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    min-height: 20px;
+}
+
+.profile-edit-message.success {
+    color: #15803d;
+}
+
+.profile-edit-message.error {
+    color: #dc2626;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .profile-modal {
+        padding: 12px;
+    }
+
+    .profile-modal-card {
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
+
+    .profile-modal-card h2 {
+        font-size: 24px;
+    }
+
+}

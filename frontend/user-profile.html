@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Safety Profile | Women Safety System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="profile-page">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="company-navbar">
+
+        <a href="index.html" class="company-logo-link">
+            <div class="company-logo">
+                <div class="company-logo-mark">WS</div>
+
+                <div>
+                    <h1>Women Safety System</h1>
+                    <span>SMART SAFETY TECHNOLOGY</span>
+                </div>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="wearable.html">Wearable</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Safety Dashboard</a>
+
+        </nav>
+
+        <button class="mobile-menu-button" id="mobileMenuButton">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <div class="mobile-menu-header">
+
+            <span>MENU</span>
+
+            <button id="closeMobileMenu">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="mobile-menu-links">
+
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="wearable.html">Wearable</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Safety Dashboard</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROFILE HERO ================= -->
+
+    <main class="profile-main">
+
+        <section class="profile-hero">
+
+            <div class="profile-avatar" id="profileAvatar">
+                U
+            </div>
+
+            <div class="profile-heading">
+
+                <span class="profile-small-label">
+                    MY SAFETY ACCOUNT
+                </span>
+
+                <h1 id="profileName">
+                    User
+                </h1>
+
+                <p>
+                    Manage your personal information,
+                    emergency contacts and connected wearable.
+                </p>
+
+            </div>
+
+            <button
+                class="profile-logout"
+                id="logoutButton"
+                type="button">
+
+                Logout
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= PROFILE GRID ================= -->
+
+        <section class="profile-grid">
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="profile-card personal-profile-card">
+
+                <div class="profile-card-heading">
+
+                    <div class="profile-card-icon">
+                        👤
+                    </div>
+
+                    <div>
+                        <span>ACCOUNT</span>
+                        <h2>Personal Information</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-details">
+
+                    <div class="profile-detail">
+
+                        <span>Full Name</span>
+
+                        <strong id="userName">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>Email Address</span>
+
+                        <strong id="userEmail">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>Phone Number</span>
+
+                        <strong id="userPhone">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="profile-action-button"
+                    id="editProfileButton"
+                    type="button">
+
+                    ✏️ Edit Profile
+
+                </button>
+
+            </div>
+
+
+
+            <!-- EMERGENCY CONTACT -->
+
+            <div class="profile-card emergency-profile-card">
+
+                <div class="profile-card-heading">
+
+                    <div class="profile-card-icon">
+                        🚨
+                    </div>
+
+                    <div>
+                        <span>EMERGENCY</span>
+                        <h2>Trusted Contact</h2>
+                    </div>
+
+                </div>
+
+
+                <p class="profile-card-description">
+
+                    This contact is intended to receive
+                    safety alerts from your wearable system
+                    when the emergency feature is activated.
+
+                </p>
+
+
+                <div class="emergency-contact-box">
+
+                    <div class="contact-status-dot"></div>
+
+                    <div>
+
+                        <span>Emergency Contact</span>
+
+                        <strong id="emergencyContact">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="profile-action-button emergency-edit-button"
+                    id="editEmergencyButton"
+                    type="button">
+
+                    📞 Update Contact
+
+                </button>
+
+            </div>
+
+
+
+            <!-- WEARABLE -->
+
+            <div class="profile-card wearable-profile-card">
+
+                <div class="profile-card-heading">
+
+                    <div class="profile-card-icon">
+                        ⌚
+                    </div>
+
+                    <div>
+                        <span>CONNECTED DEVICE</span>
+                        <h2>My Wearable</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="device-status">
+
+                    <div class="device-status-indicator">
+                        <span></span>
+                        ONLINE
+                    </div>
+
+                    <strong id="deviceStatus">
+                        Ready
+                    </strong>
+
+                </div>
+
+
+                <div class="device-information">
+
+                    <div>
+
+                        <span>Device ID</span>
+
+                        <strong id="deviceId">
+                            WS-001
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Battery</span>
+
+                        <strong id="deviceBattery">
+                            82%
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Connection</span>
+
+                        <strong>
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="wearable.html"
+                    class="profile-device-button">
+
+                    View Wearable
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SAFETY SETTINGS -->
+
+            <div class="profile-card safety-settings-card">
+
+                <div class="profile-card-heading">
+
+                    <div class="profile-card-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+                        <span>PROTECTION</span>
+                        <h2>Safety Settings</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="safety-setting-list">
+
+                    <div class="safety-setting">
+
+                        <div>
+
+                            <strong>SOS Protection</strong>
+
+                            <span>
+                                Emergency alert feature
+                            </span>
+
+                        </div>
+
+                        <div class="setting-status active">
+                            ON
+                        </div>
+
+                    </div>
+
+
+                    <div class="safety-setting">
+
+                        <div>
+
+                            <strong>Location Sharing</strong>
+
+                            <span>
+                                Location available during alert
+                            </span>
+
+                        </div>
+
+                        <div class="setting-status active">
+                            ON
+                        </div>
+
+                    </div>
+
+
+                    <div class="safety-setting">
+
+                        <div>
+
+                            <strong>Device Monitoring</strong>
+
+                            <span>
+                                Wearable connection monitoring
+                            </span>
+
+                        </div>
+
+                        <div class="setting-status active">
+                            ON
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SAFETY NOTICE ================= -->
+
+        <section class="profile-safety-notice">
+
+            <div class="notice-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h3>Your Safety Comes First</h3>
+
+                <p>
+                    This website is a prototype of the proposed
+                    Women Safety System. The wearable and emergency
+                    communication features can be connected to the
+                    backend system as the project is developed further.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="company-footer">
+
+        <div class="footer-logo">
+
+            <div class="company-logo-mark">
+                WS
+            </div>
+
+            <div>
+                <h3>Women Safety System</h3>
+
+                <span>
+                    SMART SAFETY TECHNOLOGY
+                </span>
+            </div>
+
+        </div>
+
+        <p>
+            Technology designed to support faster
+            emergency response and personal safety.
+        </p>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Women Safety System
+            </span>
+
+            <span>
+                Safety • Technology • Protection
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= EDIT PROFILE MODAL ================= -->
+
+    <div class="profile-modal" id="profileModal">
+
+        <div class="profile-modal-card">
+
+            <button
+                class="profile-modal-close"
+                id="closeProfileModal"
+                type="button">
+
+                ✕
+
+            </button>
+
+            <span class="profile-modal-label">
+                ACCOUNT SETTINGS
+            </span>
+
+            <h2>Edit Profile</h2>
+
+            <p>
+                Update the information stored in your safety profile.
+            </p>
+
+
+            <form id="editProfileForm">
+
+                <div class="modal-form-group">
+
+                    <label for="editName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editName"
+                        required>
+
+                </div>
+
+
+                <div class="modal-form-group">
+
+                    <label for="editPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="editPhone"
+                        required>
+
+                </div>
+
+
+                <div class="modal-form-group">
+
+                    <label for="editEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="editEmail"
+                        required>
+
+                </div>
+
+
+                <div class="modal-form-group">
+
+                    <label for="editEmergency">
+                        Emergency Contact
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="editEmergency"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="profile-save-button">
+
+                    Save Changes
+
+                </button>
+
+            </form>
+
+
+            <div
+                class="profile-edit-message"
+                id="profileEditMessage">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/company-menu.js"></script>
+    <script src="js/account.js"></script>
+
+</body>
+</html>

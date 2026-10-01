@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sakhi | Devices</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="devices">
+
+    <div class="app-shell">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-mark">WS</div>
+
+                <div>
+                    <h1>Sakhi</h1>
+                    <span>Women Safety System</span>
+                </div>
+            </div>
+
+            <nav class="nav">
+                   <!-- HOME -->
+                <a href="index.html"
+                   class="nav-link"
+                   data-page="home">
+
+                    <span>⌂</span>
+                    <label>Home</label>
+
+                </a>
+
+                <a href="dashboard.html"
+                   class="nav-link"
+                   data-page="dashboard">
+                    <span>📊</span>
+                    <label>Dashboard</label>
+                </a>
+
+                <a href="alerts.html"
+                   class="nav-link"
+                   data-page="alerts">
+                    <span>🚨</span>
+                    <label>Alerts</label>
+                    <b id="navAlertCount">0</b>
+                </a>
+
+                <a href="devices.html"
+                   class="nav-link"
+                   data-page="devices">
+                    <span>◈</span>
+                    <label>Devices</label>
+                </a>
+
+                <a href="location.html"
+                   class="nav-link"
+                   data-page="location">
+                    <span>⌖</span>
+                    <label>Live Location</label>
+                </a>
+
+                <a href="about.html"
+                   class="nav-link"
+                   data-page="about">
+                    <span>i</span>
+                    <label>About System</label>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <div class="mini-status">
+                    <span class="status-dot"></span>
+                    Backend API
+                </div>
+
+                <small>localhost:5000</small>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">
+                        SAFETY COMMAND CENTER
+                    </p>
+
+                    <h2>Devices</h2>
+                </div>
+
+                <div class="topbar-meta">
+
+                    <span id="clock">
+                        --:--:--
+                    </span>
+
+                    <span class="connection-badge"
+                          id="connectionBadge">
+
+                        <i></i>
+                        Checking...
+
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- HERO -->
+            <section class="hero compact">
+
+                <div>
+
+                    <p class="eyebrow">
+                        WEARABLE MONITORING
+                    </p>
+
+                    <h3>
+                        Connected device health
+                    </h3>
+
+                    <p>
+                        Monitor online status, battery level
+                        and latest heartbeat for every wearable.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- DEVICE REGISTRY -->
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            DEVICE REGISTRY
+                        </p>
+
+                        <h3>
+                            All Devices
+                        </h3>
+
+                    </div>
+
+                    <button
+                        class="button button-secondary"
+                        id="refreshDevices">
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+                <div id="deviceGrid"
+                     class="device-grid">
+
+                    Loading devices...
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                Sakhi Women Safety System • 2026
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/realtime.js"></script>
+
+    <!-- Devices page JavaScript -->
+    <script src="js/devices.js"></script>
+
+</body>
+
+</html>

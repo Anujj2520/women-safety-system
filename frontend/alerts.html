@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakhi  | Alerts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="alerts">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">WS</div><div><h1>Sakhi</h1><span>Women Safety System</span></div></div>
+      <nav class="nav">
+           <!-- HOME -->
+                <a href="index.html"
+                   class="nav-link"
+                   data-page="home">
+
+                    <span>⌂</span>
+                    <label>Home</label>
+
+                </a>
+        <a href="dashboard.html" class="nav-link" data-page="dashboard"><span>📊</span><label>Dashboard</label></a>
+        <a href="alerts.html" class="nav-link" data-page="alerts"><span>🚨</span><label>Alerts</label><b id="navAlertCount">0</b></a>
+        <a href="devices.html" class="nav-link" data-page="devices"><span>◈</span><label>Devices</label></a>
+        <a href="location.html" class="nav-link" data-page="location"><span>⌖</span><label>Live Location</label></a>
+        <a href="about.html" class="nav-link" data-page="about"><span>i</span><label>About System</label></a>
+      </nav>
+      <div class="sidebar-footer"><div class="mini-status"><span class="status-dot"></span> Backend API</div><small>localhost:5000</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">SAFETY COMMAND CENTER</p><h2>Alerts</h2></div><div class="topbar-meta"><span id="clock">--:--:--</span><span class="connection-badge" id="connectionBadge"><i></i> Checking...</span></div></header>
+      <section class="hero compact"><div><p class="eyebrow">EMERGENCY RESPONSE</p><h3>SOS alert management</h3><p>Review incoming alerts and update their response status.</p></div></section>
+      <section class="stats-grid three">
+        <article class="stat-card"><div class="stat-icon danger">!</div><div><span>Active</span><strong id="activeCount">0</strong></div></article>
+        <article class="stat-card"><div class="stat-icon warning">◌</div><div><span>Acknowledged</span><strong id="ackCount">0</strong></div></article>
+        <article class="stat-card"><div class="stat-icon success">✓</div><div><span>Resolved</span><strong id="resolvedCount">0</strong></div></article>
+      </section>
+      <section class="panel">
+        <div class="panel-header"><div><p class="eyebrow">ALERT LOG</p><h3>All SOS Alerts</h3></div><button class="button button-secondary" id="refreshAlerts">Refresh</button></div>
+        <div id="alertCards" class="alert-list">Loading alerts...</div>
+      </section>
+      <footer class="footer">SakhiWomen Safety System • 2026</footer>
+    </main>
+  </div>
+  <script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/realtime.js"></script>
+<script src="js/alerts.js"></script>
+</body>
+</html>

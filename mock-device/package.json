@@ -1,0 +1,9 @@
+{
+  "name": "women-safety-mock-device",
+  "version": "1.0.0",
+  "description": "Mock wearable device simulator for the Women Safety System",
+  "main": "simulator.js",
+  "scripts": {
+    "start": "node simulator.js"
+  }
+}

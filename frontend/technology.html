@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Women Safety System technology, wearable device, emergency alerts, location monitoring and connected safety platform.">
+    <title>Technology | Sakhi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .technology-flow {
+            width: min(1120px, 92%);
+            margin: 36px auto 0;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .flow-item {
+            flex: 1 1 160px;
+            min-width: 145px;
+            padding: 22px 16px;
+            border: 1px solid #ebe4f8;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 12px 35px rgba(73, 47, 120, .07);
+            text-align: center;
+        }
+        .flow-item strong { display:block; color:#29223f; font-size:15px; line-height:1.35; }
+        .flow-item span { display:block; margin-top:8px; color:#77708a; font-size:12px; line-height:1.5; }
+        .flow-arrow { display:grid; place-items:center; color:#7048c8; font-size:25px; font-weight:800; padding:0 2px; }
+        .tech-note {
+            max-width: 980px;
+            margin: 28px auto 0;
+            padding: 22px 24px;
+            border: 1px solid #ebe4f8;
+            border-radius: 18px;
+            background: #faf8ff;
+            color: #625b73;
+            line-height: 1.7;
+        }
+        @media (max-width:760px) {
+            .technology-flow { width:100%; display:grid; grid-template-columns:1fr; gap:10px; }
+            .flow-item { min-width:0; }
+            .flow-arrow { transform:rotate(90deg); min-height:22px; }
+        }
+    </style>
+</head>
+
+<body class="company-home">
+
+<header class="company-navbar">
+    <a href="index.html" class="company-logo-link">
+        <div class="company-logo">
+            <div class="company-logo-mark">WS</div>
+            <div>
+                <h1>Women Safety System</h1>
+                <span>SMART SAFETY TECHNOLOGY</span>
+            </div>
+        </div>
+    </a>
+    <nav class="company-nav">
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu">☰</button>
+        <div class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="technology.html" class="active">Technology</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="products.html">Wearable</a>
+            <a href="about-company.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html" class="login-button">Safety Dashboard</a>
+        </div>
+    </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <strong>Women Safety System</strong>
+        <button id="closeMobileMenu" aria-label="Close menu">×</button>
+    </div>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="products.html">Wearable Device</a>
+        <a href="about-company.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Open Safety Dashboard →</a>
+    </div>
+</div>
+
+<main>
+
+<section class="company-hero">
+    <div class="hero-content">
+        <span class="hero-tag">WOMEN SAFETY TECHNOLOGY</span>
+        <h2>Technology built for <span>connected safety.</span></h2>
+        <p>
+            Women Safety System combines a wearable safety device, emergency
+            communication, location information, backend services and a monitoring
+            dashboard into one connected platform.
+        </p>
+        <div class="hero-buttons">
+            <a href="how-it-works.html" class="primary-button">See How It Works</a>
+            <a href="products.html" class="secondary-button">Explore Wearable →</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="device-glow"></div>
+        <div class="wearable">
+            <div class="wearable-top">WOMEN SAFETY</div>
+            <div class="sos-button">SOS</div>
+            <div class="wearable-status"><span></span>SYSTEM READY</div>
+        </div>
+        <div class="floating-card alert-card-demo">
+            <span class="demo-icon">!</span>
+            <div><strong>SOS Alert</strong><small>Emergency signal received</small></div>
+        </div>
+        <div class="floating-card location-card-demo">
+            <span class="demo-icon">⌖</span>
+            <div><strong>Location Connected</strong><small>Location information available</small></div>
+        </div>
+    </div>
+</section>
+
+<section class="company-intro">
+    <p class="section-label">OUR TECHNOLOGY</p>
+    <h2>One platform connecting <span>device, software and response.</span></h2>
+    <p>
+        The project is designed as a connected safety ecosystem rather than a single
+        device. A wearable interface can initiate an emergency event, the backend can
+        receive and manage that event, and the safety dashboard can present available
+        alert, device and location information in one place.
+    </p>
+</section>
+
+<section class="company-section">
+    <div class="section-heading">
+        <p class="section-label">TECHNOLOGY OVERVIEW</p>
+        <h2>What technologies are used?</h2>
+        <p>
+            The current project combines web technology, backend services, real-time
+            communication, device simulation and location data. The architecture is
+            modular so real hardware can be integrated later.
+        </p>
+    </div>
+
+    <div class="technology-grid">
+        <article class="technology-card">
+            <div class="technology-icon">◉</div>
+            <h3>Wearable Device</h3>
+            <p>
+                The proposed wearable is the user-facing safety interface. Its main
+                purpose is to provide a simple emergency interaction such as an SOS
+                control while remaining compact and easy to carry.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">!</div>
+            <h3>SOS Emergency Alerts</h3>
+            <p>
+                An emergency event is sent to the backend and displayed in the safety
+                dashboard. The alert becomes a central event that can be monitored
+                and managed.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">⌖</div>
+            <h3>Location Information</h3>
+            <p>
+                Available latitude and longitude information can be associated with a
+                device and its emergency events, allowing the dashboard to show the
+                location connected with an alert.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">↔</div>
+            <h3>Connected Backend</h3>
+            <p>
+                A Node.js and Express backend provides API endpoints for health,
+                alerts and device information. It acts as the communication layer
+                between the device side and dashboard.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">◈</div>
+            <h3>Real-Time Communication</h3>
+            <p>
+                Socket.IO is used for real-time communication so connected dashboard
+                clients can receive system updates without relying only on manual
+                page refreshes.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">▣</div>
+            <h3>Safety Dashboard</h3>
+            <p>
+                The web dashboard provides a central interface for viewing alerts,
+                registered devices, device status, battery information and available
+                location information.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="company-section technology-section">
+    <div class="section-heading">
+        <p class="section-label">SYSTEM ARCHITECTURE</p>
+        <h2>How our technology works together.</h2>
+        <p>
+            Every layer has a specific role. This separation makes the project easier
+            to test now and easier to expand when physical hardware is added.
+        </p>
+    </div>
+
+    <div class="steps-grid">
+        <article class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">◉</div>
+            <h3>Wearable / Simulator</h3>
+            <p>
+                The proposed wearable provides the emergency input. During the current
+                development stage, a software-based mock device is used to simulate
+                device communication.
+            </p>
+        </article>
+
+        <article class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">!</div>
+            <h3>Backend API</h3>
+            <p>
+                The Node.js and Express server receives device information and
+                emergency events through API endpoints and manages system data.
+            </p>
+        </article>
+
+        <article class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">↔</div>
+            <h3>Real-Time Layer</h3>
+            <p>
+                Socket.IO provides a communication layer for pushing important
+                system updates toward connected dashboard clients.
+            </p>
+        </article>
+
+        <article class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-icon">✓</div>
+            <h3>Safety Dashboard</h3>
+            <p>
+                The dashboard presents the information in a simple monitoring
+                interface so system activity can be viewed from one place.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="company-about">
+    <div>
+        <p class="section-label">OUR DEVICE</p>
+        <h2>A wearable designed around <span>simple emergency interaction.</span></h2>
+    </div>
+    <div>
+        <p>
+            The proposed Women Safety System wearable is intended to be small,
+            convenient and easy to operate. The central idea is to provide a
+            dedicated safety control without requiring a complicated interface
+            during an emergency.
+        </p>
+        <p>
+            The current college project uses a simulated device to develop and test
+            the complete software flow before physical hardware is finalized. This
+            allows the backend, alert system and dashboard to be developed
+            independently of the final wearable design.
+        </p>
+        <a href="products.html" class="secondary-button">View Wearable Concept →</a>
+    </div>
+</section>
+
+<section class="company-section">
+    <div class="section-heading">
+        <p class="section-label">SPECIAL FEATURES</p>
+        <h2>What makes our device and system special?</h2>
+        <p>
+            The focus is on creating a simple, connected and expandable safety
+            platform. These features are part of the current project concept and
+            implementation.
+        </p>
+    </div>
+
+    <div class="technology-grid">
+        <article class="technology-card">
+            <div class="technology-icon">!</div>
+            <h3>Dedicated SOS Control</h3>
+            <p>
+                A dedicated emergency control gives the wearable a clear safety
+                purpose instead of requiring the user to navigate through a
+                complicated interface.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">⚡</div>
+            <h3>Fast Alert Communication</h3>
+            <p>
+                The system is designed around a direct alert flow from the device
+                side to the backend and then to the monitoring dashboard.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">⌖</div>
+            <h3>Location-Aware Alerts</h3>
+            <p>
+                Available device coordinates can be associated with an alert,
+                giving the monitoring interface useful location context.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">◈</div>
+            <h3>Device Health Monitoring</h3>
+            <p>
+                The system can monitor battery level, online status and the latest
+                heartbeat received from a device.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">↻</div>
+            <h3>Heartbeat Monitoring</h3>
+            <p>
+                Regular heartbeat information helps the backend determine whether
+                a connected device has recently communicated with the system.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">+</div>
+            <h3>Expandable Design</h3>
+            <p>
+                The software is separated into device, backend and frontend layers,
+                making it possible to replace the simulator with physical hardware
+                in future development.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="company-section technology-section">
+    <div class="section-heading">
+        <p class="section-label">CURRENT PROJECT STACK</p>
+        <h2>Technology behind the prototype.</h2>
+        <p>These technologies form the current software foundation of the project.</p>
+    </div>
+
+    <div class="technology-grid">
+        <article class="technology-card">
+            <div class="technology-icon">HTML</div>
+            <h3>HTML</h3>
+            <p>Used to structure the public website and safety dashboard pages.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">CSS</div>
+            <h3>CSS</h3>
+            <p>Used for responsive layouts, visual design, cards, navigation and mobile-friendly interfaces.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Used for frontend interactions, API communication, dashboard updates and device simulation logic.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">N</div>
+            <h3>Node.js</h3>
+            <p>Provides the server-side runtime for the Women Safety System backend.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">E</div>
+            <h3>Express.js</h3>
+            <p>Provides the backend API layer for health checks, alerts and device communication.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">S</div>
+            <h3>Socket.IO</h3>
+            <p>Provides real-time communication between the backend and connected dashboard clients.</p>
+        </article>
+    </div>
+</section>
+
+
+<section class="company-section technology-section">
+    <div class="section-heading">
+        <p class="section-label">HARDWARE TECHNOLOGY</p>
+        <h2>Hardware behind the Sakhi wearable.</h2>
+        <p>
+            The current college project is a software prototype. The physical wearable
+            is planned as the next development stage, so proposed hardware is clearly
+            separated from what is already implemented.
+        </p>
+    </div>
+
+    <div class="technology-grid">
+        <article class="technology-card">
+            <div class="technology-icon">HW</div>
+            <h3>Current Prototype</h3>
+            <p>
+                At present, the project uses a computer/laptop and a software-based mock
+                device to simulate the wearable, SOS events, battery information and
+                location data.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">MC</div>
+            <h3>ESP32-Class Microcontroller</h3>
+            <p>
+                A future physical version can use an ESP32-class microcontroller as the
+                main control unit for the SOS button, sensors and communication.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">GPS</div>
+            <h3>GPS / GNSS Module</h3>
+            <p>
+                A GPS/GNSS module can provide latitude and longitude for the wearable.
+                The current prototype represents these coordinates through simulated
+                device data.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">SOS</div>
+            <h3>Physical SOS Button</h3>
+            <p>
+                The planned wearable has a dedicated emergency button that can trigger
+                an SOS event and send it to the connected safety system.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">BAT</div>
+            <h3>Rechargeable Battery</h3>
+            <p>
+                A compact rechargeable battery and power-management circuit are planned
+                for the physical wearable, with battery level available for monitoring.
+            </p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">NET</div>
+            <h3>Communication Module</h3>
+            <p>
+                The final device can use a suitable wireless or cellular connection.
+                An optional GSM/LTE module is one possible future approach for
+                independent connectivity.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="company-section">
+    <div class="section-heading">
+        <p class="section-label">SOFTWARE TECHNOLOGY</p>
+        <h2>Software used in the Sakhi prototype.</h2>
+        <p>
+            The software is divided into the website, dashboard frontend, backend API,
+            real-time communication layer, data layer and device simulator.
+        </p>
+    </div>
+
+    <div class="technology-grid">
+        <article class="technology-card">
+            <div class="technology-icon">HTML</div>
+            <h3>HTML5</h3>
+            <p>Structures the public website and safety dashboard pages.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">CSS</div>
+            <h3>CSS3</h3>
+            <p>Provides responsive layouts, navigation, cards and the visual design.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Handles frontend interaction, API requests, dynamic data and simulator logic.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">N</div>
+            <h3>Node.js</h3>
+            <p>Provides the server-side runtime for the Sakhi backend.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">E</div>
+            <h3>Express.js</h3>
+            <p>Provides REST API endpoints for health, devices, alerts and SOS events.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">S</div>
+            <h3>Socket.IO</h3>
+            <p>Provides real-time communication between the backend and connected dashboard clients.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">JSON</div>
+            <h3>JSON Data Storage</h3>
+            <p>Used as the current prototype data layer instead of requiring PostgreSQL during development.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">MAP</div>
+            <h3>Maps & Location</h3>
+            <p>OpenStreetMap is used for the location view and Google Maps can open device coordinates.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">VS</div>
+            <h3>VS Code</h3>
+            <p>Used as the development environment for the frontend, backend and simulator.</p>
+        </article>
+    </div>
+</section>
+
+<section class="company-about">
+    <div>
+        <p class="section-label">NOW VS FUTURE</p>
+        <h2>From software prototype to <span>physical wearable.</span></h2>
+    </div>
+    <div>
+        <p>
+            <strong>Current:</strong> software-based mock device, Node.js + Express
+            backend, JSON data storage, JavaScript frontend, Socket.IO and map-based
+            location display.
+        </p>
+        <p>
+            <strong>Future:</strong> a physical wearable can integrate a microcontroller,
+            SOS button, GPS/GNSS, rechargeable battery and an appropriate communication
+            module.
+        </p>
+    </div>
+</section>
+
+<section class="company-section technology-section">
+    <div class="section-heading">
+        <p class="section-label">DEVICE SPECIALITIES</p>
+        <h2>What makes the Sakhi system special?</h2>
+        <p>
+            The concept combines a simple wearable interaction with location,
+            backend communication and a monitoring dashboard.
+        </p>
+    </div>
+
+    <div class="technology-grid">
+        <article class="technology-card">
+            <div class="technology-icon">!</div>
+            <h3>Dedicated SOS</h3>
+            <p>A direct emergency control is designed for a simple safety action.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">⌖</div>
+            <h3>Location-Aware Alerts</h3>
+            <p>Available coordinates can be associated with an alert and displayed on the map.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">⚡</div>
+            <h3>Real-Time Updates</h3>
+            <p>Socket.IO can deliver important system updates to connected dashboard clients.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">BAT</div>
+            <h3>Device Health</h3>
+            <p>Battery level, online status and heartbeat information can be monitored.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">↻</div>
+            <h3>Heartbeat Monitoring</h3>
+            <p>Regular device communication helps track the latest device activity.</p>
+        </article>
+
+        <article class="technology-card">
+            <div class="technology-icon">+</div>
+            <h3>Expandable Architecture</h3>
+            <p>The separate device, backend and frontend layers support future hardware integration.</p>
+        </article>
+    </div>
+</section>
+
+<section class="company-intro">
+    <p class="section-label">DATA FLOW</p>
+    <h2>From an emergency signal to <span>the safety dashboard.</span></h2>
+    <p>The planned project flow connects the following components:</p>
+
+    <div class="technology-flow">
+        <div class="flow-item"><strong>Wearable / Simulator</strong><span>Sends device event</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>Backend API</strong><span>Receives and processes data</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>Data Layer</strong><span>Stores system information</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>Socket.IO</strong><span>Shares live updates</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>Safety Dashboard</strong><span>Displays the event</span></div>
+    </div>
+
+    <div class="tech-note">
+        <strong>Current prototype:</strong> The project currently uses a software-based
+        mock device and JSON-based data storage while the physical wearable and final
+        hardware architecture are being developed.
+    </div>
+</section>
+
+<section class="company-about">
+    <div>
+        <p class="section-label">FUTURE DEVELOPMENT</p>
+        <h2>From software prototype to <span>real wearable system.</span></h2>
+    </div>
+    <div>
+        <p>
+            Future development can move toward physical wearable hardware and
+            additional communication and location capabilities.
+        </p>
+        <p>
+            Possible future work includes a physical SOS button, dedicated location
+            hardware, improved power management, mobile application support, multiple
+            wearable form factors and stronger notification integration.
+        </p>
+    </div>
+</section>
+
+<section class="company-intro">
+    <p class="section-label">PROJECT STATUS</p>
+    <h2>Built step by step, <span>with hardware integration in mind.</span></h2>
+    <p>
+        The current college prototype demonstrates the software architecture and
+        communication flow using a mock device. The final physical wearable,
+        hardware components and production-level communication services are part of
+        future development rather than features being claimed as already deployed.
+    </p>
+</section>
+
+<section class="company-cta">
+    <p class="section-label">WOMEN SAFETY SYSTEM</p>
+    <h2>Technology that connects the complete safety journey.</h2>
+    <p>Explore how the wearable, backend and safety dashboard work together.</p>
+    <div class="hero-buttons">
+        <a href="how-it-works.html" class="primary-button">See How It Works →</a>
+        <a href="dashboard.html" class="secondary-button"</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="company-footer">
+    <div>
+        <div class="company-logo">
+            <div class="company-logo-mark">WS</div>
+            <div>
+                <h1>Women Safety System</h1>
+                <span>SMART SAFETY TECHNOLOGY</span>
+            </div>
+        </div>
+        <p>Connected technology for emergency safety and real-time monitoring.</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="technology.html">Technology</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="products.html">Wearable</a>
+        <a href="about-company.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Women Safety System. All rights reserved.
+    </div>
+</footer>
+
+<script src="js/company-menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | Women Safety System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="company-home account-page">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="company-navbar">
+
+        <a href="index.html" class="company-logo-link">
+
+            <div class="company-logo">
+
+                <div class="company-logo-mark">
+                    WS
+                </div>
+
+                <div>
+                    <h1>Variable Safety System</h1>
+                    <span>SMART SAFETY TECHNOLOGY</span>
+                </div>
+
+            </div>
+
+        </a>
+
+        <nav class="company-nav">
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+            <div class="desktop-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="technology.html">
+                    Technology
+                </a>
+
+                <a href="how-it-works.html">
+                    How It Works
+                </a>
+
+                <a href="products.html">
+                    Wearable
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="dashboard.html" class="login-button">
+                    Safety Dashboard
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <div class="mobile-menu-header">
+
+            <strong>
+                Women Safety System
+            </strong>
+
+            <button
+                id="closeMobileMenu"
+                aria-label="Close menu">
+
+                ×
+
+            </button>
+
+        </div>
+
+        <div class="mobile-menu-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="technology.html">
+                Technology
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="products.html">
+                Wearable Device
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a
+                href="dashboard.html"
+                class="mobile-dashboard">
+
+                Open Safety Dashboard →
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ACCOUNT PAGE ================= -->
+
+    <main class="account-main">
+
+        <section class="account-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="account-intro">
+
+                <div class="account-logo-big">
+                    WS
+                </div>
+
+                <span class="account-label">
+                    WOMEN SAFETY SYSTEM
+                </span>
+
+                <h1>
+                    Your safety,
+                    <span>your control.</span>
+                </h1>
+
+                <p>
+                    Create your personal safety account to manage
+                    your profile, trusted contacts and wearable
+                    safety information from one place.
+                </p>
+
+                <div class="account-features">
+
+                    <div class="account-feature">
+
+                        <div class="account-feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                Personal Safety Profile
+                            </strong>
+
+                            <span>
+                                Keep your important safety information
+                                organized.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-feature">
+
+                        <div class="account-feature-icon">
+                            +
+                        </div>
+
+                        <div>
+                            <strong>
+                                Trusted Contacts
+                            </strong>
+
+                            <span>
+                                Manage the people you trust during
+                                an emergency.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-feature">
+
+                        <div class="account-feature-icon">
+                            WS
+                        </div>
+
+                        <div>
+                            <strong>
+                                Wearable Connection
+                            </strong>
+
+                            <span>
+                                View your connected safety device
+                                information.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="account-card">
+
+                <!-- TABS -->
+
+                <div class="account-tabs">
+
+                    <button
+                        class="account-tab active"
+                        id="loginTab"
+                        type="button">
+
+                        Login
+
+                    </button>
+
+                    <button
+                        class="account-tab"
+                        id="signupTab"
+                        type="button">
+
+                        Create Account
+
+                    </button>
+
+                </div>
+
+
+                <!-- ================= LOGIN ================= -->
+
+                <form
+                    id="loginForm"
+                    class="account-form active">
+
+                    <div class="form-heading">
+
+                        <span>
+                            WELCOME BACK
+                        </span>
+
+                        <h2>
+                            Login to your account
+                        </h2>
+
+                        <p>
+                            Access your personal safety profile.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="account-submit">
+
+                        Login to Safety Profile
+                        <span>→</span>
+
+                    </button>
+
+
+                    <p
+                        class="form-switch">
+
+                        Don't have an account?
+
+                        <button
+                            type="button"
+                            id="goToSignup">
+
+                            Create Account
+
+                        </button>
+
+                    </p>
+
+                </form>
+
+
+                <!-- ================= CREATE ACCOUNT ================= -->
+
+                <form
+                    id="signupForm"
+                    class="account-form">
+
+                    <div class="form-heading">
+
+                        <span>
+                            NEW USER
+                        </span>
+
+                        <h2>
+                            Create your account
+                        </h2>
+
+                        <p>
+                            Set up your personal safety profile.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="emergencyContact">
+                            Primary Emergency Contact
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="emergencyContact"
+                            placeholder="Parent / Guardian phone number"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupPassword">
+                            Create Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            placeholder="Create a password"
+                            minlength="6"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="account-submit">
+
+                        Create Safety Account
+                        <span>→</span>
+
+                    </button>
+
+
+                    <p class="form-note">
+
+                        By creating an account, you can manage
+                        your safety profile and trusted contacts.
+
+                    </p>
+
+
+                    <p
+                        class="form-switch">
+
+                        Already have an account?
+
+                        <button
+                            type="button"
+                            id="goToLogin">
+
+                            Login
+
+                        </button>
+
+                    </p>
+
+                </form>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="accountMessage"
+                    class="account-message">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="company-footer">
+
+        <div>
+
+            <div class="company-logo">
+
+                <div class="company-logo-mark">
+                    WS
+                </div>
+
+                <div>
+
+                    <h1>
+                        Women Safety System
+                    </h1>
+
+                    <span>
+                        SMART SAFETY TECHNOLOGY
+                    </span>
+
+                </div>
+
+            </div>
+
+            <p>
+                Connected technology for emergency safety
+                and real-time monitoring.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="technology.html">
+                Technology
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="products.html">
+                Wearable
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Women Safety System.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- COMMON MOBILE MENU -->
+
+    <script src="js/company-menu.js"></script>
+
+    <!-- ACCOUNT SYSTEM -->
+
+    <script src="js/account.js"></script>
+    <script src="js/company-menu.js"></script>
+
+</body>
+
+</html>
